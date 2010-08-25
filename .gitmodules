@@ -1,0 +1,18 @@
+[submodule "addons/nerdtree"]
+	path = addons/nerdtree
+	url = http://github.com/scrooloose/nerdtree.git
+[submodule "addons/nerdcommenter"]
+	path = addons/nerdcommenter
+	url = http://github.com/scrooloose/nerdcommenter.git
+[submodule "addons/neocomplcache"]
+	path = addons/neocomplcache
+	url = http://github.com/Shougo/neocomplcache.git
+[submodule "addons/surround"]
+	path = addons/surround
+	url = http://github.com/tpope/vim-surround.git
+[submodule "addons/vim-session"]
+	path = addons/vim-session
+	url = http://github.com/xolox/vim-session.git
+[submodule "addons/xmledit"]
+	path = addons/xmledit
+	url = http://github.com/sukima/xmledit.git
