@@ -300,6 +300,9 @@ set noswapfile
                 \ '\.jpg$', '\.png$', '\.gif$',
                 \ '\.swf$', '\.fla$', '\.o$']
 
+    """"""""""""""""""""""""""""""
+    " NERDCommenter 
+    """"""""""""""""""""""""""""""
     nmap ,cc <leader>cc
     nmap ,c<space> <leader>c<space>
 
@@ -412,12 +415,13 @@ set noswapfile
                         \"neocomplcache",
                         \"nerdcommenter",
                         \"nerdtree",
+                        \"session",
                         \"surround",
                         \"taglist",
                         \"vim-addon-manager",
                         \"vim-addon-manager-known-repositories",
-                        \"session",
                         \"xmledit",
+                        \"snipmate",
                         \"zencoding"
                 \])
         catch /.*/
