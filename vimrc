@@ -408,6 +408,7 @@ set noswapfile
             call scriptmanager#Activate([
                         \"BufOnly",
                         \"DrawIt!",
+                        \"PHP-correct-Indenting",
                         \"SuperTab_continued.",
                         \"css_color",
                         \"fuzzyfinder",
@@ -416,12 +417,12 @@ set noswapfile
                         \"nerdcommenter",
                         \"nerdtree",
                         \"session",
+                        \"snipmate",
                         \"surround",
                         \"taglist",
                         \"vim-addon-manager",
                         \"vim-addon-manager-known-repositories",
                         \"xmledit",
-                        \"snipmate",
                         \"zencoding"
                 \])
         catch /.*/
