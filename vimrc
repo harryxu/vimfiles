@@ -304,7 +304,9 @@ set noswapfile
     " NERDCommenter 
     """"""""""""""""""""""""""""""
     nmap ,cc <leader>cc
+    vmap ,cc <leader>cc
     nmap ,c<space> <leader>c<space>
+    vmap ,c<space> <leader>c<space>
 
     """"""""""""""""""""""""""""""
     " snipMate 
@@ -378,9 +380,14 @@ set noswapfile
     " => Zen Coding
     """"""""""""""""""""""""""""""
     let g:user_zen_settings = {
-    \    'indentation' : '  ',
+        \'indentation' : '  ',
     \}
-    let g:user_zen_expandabbr_key = '<C-K>'
+    " use ctrl+k to expand zencoding code
+    imap <silent> <C-k> <ESC>:call Expand_zen()<CR>
+    fun Expand_zen()
+        call feedkeys("\a")
+        call feedkeys("\<C-y>,")
+    endfun
     "let g:use_zen_complete_tag = 1
 
     """"""""""""""""""""""""""""""
@@ -406,6 +413,7 @@ set noswapfile
         set runtimepath+=~/.vim/addons/vim-addon-manager
         try
             call scriptmanager#Activate([
+                        \"AutoClose2009",
                         \"BufOnly",
                         \"DrawIt!",
                         \"PHP-correct-Indenting",
@@ -413,6 +421,7 @@ set noswapfile
                         \"css_color",
                         \"fuzzyfinder",
                         \"matchit.zip",
+                        \"PDV_-_phpDocumentor_for_Vim",
                         \"neocomplcache",
                         \"nerdcommenter",
                         \"nerdtree",
