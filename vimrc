@@ -2,6 +2,11 @@
 "This must be first, because it changes other options as a side effect.
 set nocompatible
 
+filetype off
+filetyp plugin indent on
+
+set modelines=0
+
 if has('Win32')
     source $VIMRUNTIME/vimrc_example.vim
     "source $VIMRUNTIME/../vimfiles/mswin.vim
@@ -205,6 +210,13 @@ map <A-l> <C-W>L
 imap <C-j> <ESC>
 vmap <C-j> <ESC>
 
+" Open the definition in a new tab
+map <F5> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+
+" Open the definition in a vertical split
+map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Files and backups
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -223,9 +235,9 @@ set noswapfile
     " tab
     """"""""""""""""""""""""""""""
     set expandtab
-    set ts=4
-    set sw=4
-    set sts=4
+    set tabstop=4
+    set shiftwidth=4
+    set softtabstop=4
 
     """"""""""""""""""""""""""""""
     " indent
@@ -274,7 +286,7 @@ set noswapfile
     """"""""""""""""""""""""""""""
     " yaml,xml,html 使用2个空格作为缩进 
     """"""""""""""""""""""""""""""
-    autocmd FileType html,htmldjango,css,xml,yaml setlocal ts=2 sts=2 sw=2 expandtab
+    autocmd FileType html,xhtml,htmldjango,css,xml,yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -289,7 +301,8 @@ set noswapfile
     imap <F4> <ESC>:Tlist<CR>
 
     " ctags
-    set tags=tags;/
+    set tags+=tags;/
+    au FileType php set tags+=~/workspaces/www/drupal/.tags
 
     """"""""""""""""""""""""""""""
     " NERDTree 
@@ -298,7 +311,8 @@ set noswapfile
     let NERDTreeIgnore = ['\~$', 
                 \ '\.pyc$', '\.exe$', '\.dll$', 
                 \ '\.jpg$', '\.png$', '\.gif$',
-                \ '\.swf$', '\.fla$', '\.o$']
+                \ '\.swf$', '\.fla$', '\.o$',
+                \ '\.tar.gz']
 
     """"""""""""""""""""""""""""""
     " NERDCommenter 
@@ -367,10 +381,6 @@ set noswapfile
 
     let g:bufExplorerSortBy = "name"
 
-    "autocmd BufRead,BufNew :call UMiniBufExplorer
-
-    map <F5> :TMiniBufExplorer<CR>
-
     """"""""""""""""""""""""""""""
     " => SuperTab
     """"""""""""""""""""""""""""""
@@ -419,6 +429,7 @@ set noswapfile
                         \"PHP-correct-Indenting",
                         \"SuperTab_continued.",
                         \"css_color",
+                        \"vim-l9",
                         \"fuzzyfinder",
                         \"matchit.zip",
                         \"PDV_-_phpDocumentor_for_Vim",

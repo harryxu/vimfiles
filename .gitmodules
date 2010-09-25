@@ -10,8 +10,8 @@
 [submodule "addons/surround"]
 	path = addons/surround
 	url = http://github.com/tpope/vim-surround.git
-[submodule "addons/vim-session"]
-	path = addons/vim-session
+[submodule "addons/session"]
+	path = addons/session
 	url = http://github.com/xolox/vim-session.git
 [submodule "addons/xmledit"]
 	path = addons/xmledit

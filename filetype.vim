@@ -12,6 +12,9 @@ au BufRead,BufNewFile *.hx set filetype=haxe
 " named file
 au BufRead,BufNewFile /etc/bind/named.conf* set filetype=named
 
+" drupal info files
+au BufRead,BufNewFile *.info set filetype=dosini
+
 " nginx config file
 au BufRead,BufNewFile /etc/nginx/conf.d/*,
             \/etc/nginx/*.conf,
