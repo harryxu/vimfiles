@@ -210,6 +210,8 @@ map <A-l> <C-W>L
 imap <C-j> <ESC>
 vmap <C-j> <ESC>
 
+map <A-`> <C-^>
+
 " Open the definition in a new tab
 map <F5> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
@@ -335,6 +337,7 @@ set noswapfile
     nmap ,b :FufBuffer<CR>
     nmap ,f :FufFile<CR>
     nmap ,d :FufDir<CR>
+    nmap ,l :FufLine<CR>
     
     """"""""""""""""""""""""""""""
     " xmledit
@@ -427,8 +430,8 @@ set noswapfile
                         \"BufOnly",
                         \"DrawIt!",
                         \"PHP-correct-Indenting",
-                        \"SuperTab_continued.",
                         \"css_color",
+                        \"supertab",
                         \"vim-l9",
                         \"fuzzyfinder",
                         \"matchit.zip",
