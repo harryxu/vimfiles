@@ -410,6 +410,7 @@ set noswapfile
     let g:neocomplcache_enable_at_startup = 1
     " Use smartcase. 
     let g:NeoComplCache_SmartCase = 1
+    let g:neocomplcache_caching_limit_file_size = 5000000
 
     "let g:neocomplcache_disable_auto_complete = 1
     "

@@ -12,8 +12,6 @@ au BufRead,BufNewFile *.hx set filetype=haxe
 " named file
 au BufRead,BufNewFile /etc/bind/named.conf* set filetype=named
 
-" drupal info files
-au BufRead,BufNewFile *.info set filetype=dosini
 
 " nginx config file
 au BufRead,BufNewFile /etc/nginx/conf.d/*,
@@ -21,3 +19,13 @@ au BufRead,BufNewFile /etc/nginx/conf.d/*,
             \/etc/nginx/sites-*/* set filetype=nginx 
 
 au BufNewFile,BufRead *.log set filetype=log
+
+" Virata Config Script File or Drupal module
+au BufRead,BufNewFile *.hw,*.module,*.pkg,*.install
+	\ if getline(1) =~ '<?php' |
+	\   setf php |
+	\ else |
+	\   setf virata |
+	\ endif
+
+au BufRead,BufNewFile *.info set filetype=dosini
