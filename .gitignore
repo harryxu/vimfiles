@@ -8,8 +8,7 @@
 !.gitmodules
 
 /tags
-/doc/tags
-/doc/tags-ja
+doc/tags*
 /session
 /sessions
 

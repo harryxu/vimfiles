@@ -2,8 +2,12 @@
 "This must be first, because it changes other options as a side effect.
 set nocompatible
 
+" pathogen
+call pathogen#runtime_append_all_bundles("addons")
+"call pathogen#helptags()
+
 filetype off
-filetyp plugin indent on
+filetype plugin indent on
 
 set modelines=0
 
@@ -12,7 +16,7 @@ if has('Win32')
     "source $VIMRUNTIME/../vimfiles/mswin.vim
     behave mswin
 else
-    runtime! debian.vim
+    "runtime! debian.vim
     source $VIMRUNTIME/vimrc_example.vim
     if filereadable("/etc/vim/gvimrc.local")
         source /etc/vim/gvimrc.local
@@ -253,8 +257,6 @@ set noswapfile
     "C-style indeting
     "set cindent
 
-    filetype plugin indent on
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Filetype generic
@@ -419,42 +421,3 @@ set noswapfile
     " => Session manager
     """"""""""""""""""""""""""""""
     let g:session_autosave = 1
-
-    """"""""""""""""""""""""""""""
-    " => vim addons manager
-    """"""""""""""""""""""""""""""
-    fun ActivateAddons()
-        set runtimepath+=~/.vim/addons/vim-addon-manager
-        try
-            call scriptmanager#Activate([
-                        \"AutoClose2009",
-                        \"BufOnly",
-                        \"DrawIt!",
-                        \"PHP-correct-Indenting",
-                        \"css_color",
-                        \"supertab",
-                        \"vim-l9",
-                        \"fuzzyfinder",
-                        \"matchit.zip",
-                        \"PDV_-_phpDocumentor_for_Vim",
-                        \"neocomplcache",
-                        \"nerdcommenter",
-                        \"nerdtree",
-                        \"session",
-                        \"snipmate",
-                        \"surround",
-                        \"taglist",
-                        \"vim-addon-manager",
-                        \"vim-addon-manager-known-repositories",
-                        \"xmledit",
-                        \"zencoding"
-                \])
-        catch /.*/
-            echoe v:exception
-        endtry
-    endf
-    call ActivateAddons()
-    " experimental: run after gui has been started
-    " report breakage in this case, please
-    " au GUIEnter * call Activate()
-
