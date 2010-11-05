@@ -21,7 +21,7 @@ au BufRead,BufNewFile /etc/nginx/conf.d/*,
 au BufNewFile,BufRead *.log set filetype=log
 
 " Virata Config Script File or Drupal module
-au BufRead,BufNewFile *.hw,*.module,*.pkg,*.install
+au BufRead,BufNewFile *.hw,*.module,*.pkg,*.install,*.test
 	\ if getline(1) =~ '<?php' |
 	\   setf php |
 	\ else |
