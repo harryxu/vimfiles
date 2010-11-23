@@ -31,3 +31,6 @@
 [submodule "addons/vim-fugitive"]
 	path = addons/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+[submodule "addons/pythoncomplete"]
+	path = addons/pythoncomplete
+	url = https://github.com/vim-scripts/pythoncomplete.git
