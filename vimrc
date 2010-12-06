@@ -293,7 +293,7 @@ set noswapfile
     """"""""""""""""""""""""""""""
     " yaml,xml,html 使用2个空格作为缩进 
     """"""""""""""""""""""""""""""
-    autocmd FileType html,xhtml,htmldjango,css,xml,yaml setlocal ts=2 sts=2 sw=2 expandtab
+    autocmd FileType html,xhtml,htmldjango,css,xml setlocal ts=2 sts=2 sw=2 expandtab
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -424,3 +424,8 @@ set noswapfile
     " => Session manager
     """"""""""""""""""""""""""""""
     let g:session_autosave = 1
+
+    """"""""""""""""""""""""""""""
+    " => ack.vim
+    """"""""""""""""""""""""""""""
+    let g:ackprg="ack-grep -H --nocolor --nogroup --column"

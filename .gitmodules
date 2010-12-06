@@ -34,3 +34,9 @@
 [submodule "addons/pythoncomplete"]
 	path = addons/pythoncomplete
 	url = https://github.com/vim-scripts/pythoncomplete.git
+[submodule "addons/markdown"]
+	path = addons/markdown
+	url = https://github.com/hallison/vim-markdown.git
+[submodule "addons/ack.vim"]
+	path = addons/ack.vim
+	url = https://github.com/mileszs/ack.vim.git
