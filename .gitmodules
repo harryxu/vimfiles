@@ -40,3 +40,6 @@
 [submodule "addons/ack.vim"]
 	path = addons/ack.vim
 	url = https://github.com/mileszs/ack.vim.git
+[submodule "addons/command-t"]
+	path = addons/command-t
+	url = git://git.wincent.com/command-t.git
