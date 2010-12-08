@@ -48,9 +48,6 @@ if !has('Win32')
 endif
 
 
-" 隐藏菜单栏和工具栏
-"set go-=m
-set go-=T
 
 " 横向滚动条
 "set go+=b
@@ -113,6 +110,22 @@ function! StatuslineCurrentHighlight()
 endfunction
 
 set nofoldenable
+
+"hide menubar and toolbar
+set go-=m
+set go-=T
+
+" toggle guioption
+function! ToggleGO(flag)
+    if &go =~# a:flag
+        call feedkeys(":set go-=".a:flag."\<CR>")
+    else
+        call feedkeys(":set go+=".a:flag."\<CR>")
+    endif
+endfunction
+
+" toggle menubar
+nmap ,m :call ToggleGO('m')<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
