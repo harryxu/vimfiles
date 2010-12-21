@@ -46,6 +46,3 @@
 [submodule "addons/vim-indent-guides"]
 	path = addons/vim-indent-guides
 	url = https://github.com/nathanaelkane/vim-indent-guides.git
-[submodule "addons/session"]
-	path = addons/session
-	url = https://github.com/xolox/vim-session.git
