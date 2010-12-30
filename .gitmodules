@@ -16,9 +16,6 @@
 [submodule "addons/vim-addon-manager-known-repositories"]
 	path = addons/vim-addon-manager-known-repositories
 	url = http://github.com/MarcWeber/vim-addon-manager-known-repositories.git
-[submodule "addons/supertab"]
-	path = addons/supertab
-	url = http://github.com/ervandew/supertab.git
 [submodule "addons/zencoding"]
 	path = addons/zencoding
 	url = https://github.com/mattn/zencoding-vim.git
