@@ -430,6 +430,9 @@ set noswapfile
     let g:NeoComplCache_SmartCase = 1
     let g:neocomplcache_caching_limit_file_size = 5000000
 
+    imap <C-l> <Plug>(neocomplcache_snippets_expand)
+    smap <C-l> <Plug>(neocomplcache_snippets_expand)
+
     "let g:neocomplcache_disable_auto_complete = 1
     "
 

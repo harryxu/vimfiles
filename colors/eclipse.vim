@@ -2,16 +2,16 @@
 " Maintainer:	Juan frias <juandfrias at gmail dot com>
 " Last Change:	2007 Feb 25
 " Version:	1.0.1
-" URL:		http://www.axisym3.net/jdany/vim-the-editor/#eclipse
-set background=light
+" URL:		http://juan.axisym3.net/vim-color-schemes/#eclipse
 highlight clear
 if exists("syntax_on")
     syntax reset
 endif
 
 let g:colors_name = "eclipse"
+set background=light
 
-highlight Normal gui=none guifg=#000000 guibg=#ffffff ctermfg=Gray
+highlight Normal gui=none guifg=#000000 guibg=#eeeeee ctermfg=Gray
 
 " Search
 highlight IncSearch gui=underline guifg=#404040 guibg=#e0e040
@@ -54,7 +54,7 @@ highlight PMenuThumb ctermbg=white ctermfg=red
 " Other
 highlight Directory  gui=none guifg=#7050ff guibg=bg
 highlight LineNr     gui=none guifg=#6b6b6b guibg=#eeeeee
-highlight NonText    gui=none guifg=#707070 guibg=#e7e7e7
+highlight NonText    gui=none guifg=#707070 guibg=bg
 highlight SpecialKey gui=none guifg=#c0c0c0 guibg=bg      cterm=none       ctermfg=4
 highlight Title      gui=bold guifg=#0033cc guibg=bg
 highlight Visual     gui=none guifg=#804020 guibg=#ffc0a0 ctermfg=DarkCyan
