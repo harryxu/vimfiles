@@ -127,6 +127,19 @@ endfunction
 " toggle menubar
 nmap ,m :call ToggleGO('m')<CR>
 
+function! CmdT()
+    if exists('b:NERDTreeRoot')
+        execute 'CommandT ' . b:NERDTreeRoot.path.str()
+    else
+        CommandT 
+    endif
+endfunction
+
+" open CommandT by NERDTree root path
+nmap ,t :call CmdT()<CR>
+
+
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Fileformats
@@ -322,7 +335,7 @@ set noswapfile
 
     " ctags
     set tags+=tags;/
-    au FileType php set tags+=~/workspaces/www/drupal/.tags
+    au FileType php set tags+=~/workspaces/www/d/.tags
 
     """"""""""""""""""""""""""""""
     " NERDTree 
