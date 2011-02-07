@@ -55,3 +55,6 @@
 [submodule "addons/tabular"]
 	path = addons/tabular
 	url = https://github.com/godlygeek/tabular.git
+[submodule "addons/pyflakes"]
+	path = addons/pyflakes
+	url = https://github.com/kevinw/pyflakes-vim.git
