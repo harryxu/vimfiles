@@ -128,8 +128,9 @@ endfunction
 nmap ,m :call ToggleGO('m')<CR>
 
 function! CmdT()
-    if exists('b:NERDTreeRoot')
-        execute 'CommandT ' . b:NERDTreeRoot.path.str()
+    if exists('t:NERDTreeBufName')
+        let ntroot = getbufvar(t:NERDTreeBufName, 'NERDTreeRoot')
+        execute 'CommandT ' . ntroot.path.str()
     else
         CommandT 
     endif
@@ -138,7 +139,7 @@ endfunction
 " open CommandT by NERDTree root path
 nmap ,t :call CmdT()<CR>
 
-
+set wildignore+=*.o,.git,.svn,*.jpg,*.gif,*.png,*.swf
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -146,8 +147,6 @@ nmap ,t :call CmdT()<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " 编码设定 
-"set fileencoding=utf-8
-"set fileencodings=utf-8,gb18030,utf-16,gb2312,big5
 set encoding=utf-8
 set fileencodings=utf-8,ucs-bom,gbk,gb2312,gb18030,cp936,default,latin1
 if has('Win32')
