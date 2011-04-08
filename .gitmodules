@@ -49,9 +49,6 @@
 [submodule "addons/pydoc.vim"]
 	path = addons/pydoc.vim
 	url = https://github.com/fs111/pydoc.vim.git
-[submodule "addons/simple-javascript-indenter"]
-	path = addons/simple-javascript-indenter
-	url = https://github.com/JiangMiao/simple-javascript-indenter.git
 [submodule "addons/tabular"]
 	path = addons/tabular
 	url = https://github.com/godlygeek/tabular.git

@@ -139,7 +139,7 @@ endfunction
 " open CommandT by NERDTree root path
 nmap ,t :call CmdT()<CR>
 
-set wildignore+=*.o,.git,.svn,*.jpg,*.gif,*.png,*.swf
+set wildignore+=*.o,.git,.svn,*.jpg,*.gif,*.png,*.swf,*.psd,*.rar,*.zip,*.doc
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
