@@ -64,3 +64,6 @@
 [submodule "addons/colorizer"]
 	path = addons/colorizer
 	url = https://github.com/lilydjwg/colorizer.git
+[submodule "addons/vim-session"]
+	path = addons/vim-session
+	url = git://github.com/xolox/vim-session.git
