@@ -70,3 +70,9 @@
 [submodule "addons/solarized"]
 	path = addons/solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "addons/unite.vim"]
+	path = addons/unite.vim
+	url = https://github.com/Shougo/unite.vim.git
+[submodule "addons/unite-outline"]
+	path = addons/unite-outline
+	url = https://github.com/h1mesuke/unite-outline.git
