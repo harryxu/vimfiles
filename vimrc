@@ -330,8 +330,13 @@ set noswapfile
     """"""""""""""""""""""""""""""
     let Tlist_Show_One_File=1
     let Tlist_Exit_OnlyWindow=1
-    map <F4> :Tlist<CR>
-    imap <F4> <ESC>:Tlist<CR>
+
+
+    """"""""""""""""""""""""""""""
+    " Tagbar
+    """"""""""""""""""""""""""""""
+    map <F4> :TagbarToggle<CR>
+    imap <F4> <ESC>:TagbarToggle<CR>
 
     " ctags
     set tags+=tags;/

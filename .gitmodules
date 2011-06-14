@@ -76,3 +76,9 @@
 [submodule "addons/unite-outline"]
 	path = addons/unite-outline
 	url = https://github.com/h1mesuke/unite-outline.git
+[submodule "addons/tagbar"]
+	path = addons/tagbar
+	url = https://github.com/majutsushi/tagbar.git
+[submodule "addons/css3-syntax"]
+	path = addons/css3-syntax
+	url = https://github.com/hail2u/vim-css3-syntax.git
