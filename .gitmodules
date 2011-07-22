@@ -82,3 +82,6 @@
 [submodule "addons/css3-syntax"]
 	path = addons/css3-syntax
 	url = https://github.com/hail2u/vim-css3-syntax.git
+[submodule "addons/snipmate-snippets"]
+	path = addons/snipmate-snippets
+	url = git://github.com/honza/snipmate-snippets.git
