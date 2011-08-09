@@ -40,7 +40,7 @@ set mouse=a
 " 显示行号 
 set nu
 
-"set cursorline
+set cursorline
 
 if !has('Win32')
     set list
@@ -109,7 +109,11 @@ function! StatuslineCurrentHighlight()
     endif
 endfunction
 
-set nofoldenable
+"set nofoldenable
+"选择代码折叠类型
+set foldmethod=syntax
+"启动vim时不要自动折叠代码
+set foldlevel=100
 
 "hide menubar and toolbar
 set go-=m
