@@ -85,3 +85,6 @@
 [submodule "addons/snipmate-snippets"]
 	path = addons/snipmate-snippets
 	url = git://github.com/honza/snipmate-snippets.git
+[submodule "addons/NrrwRgn"]
+	path = addons/NrrwRgn
+	url = git://github.com/chrisbra/NrrwRgn.git

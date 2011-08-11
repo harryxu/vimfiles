@@ -17,8 +17,6 @@ endif
   let main_syntax = 'css'
 endif
 
-set nocursorline
-
 
 syn case ignore
 
