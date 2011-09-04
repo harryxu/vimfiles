@@ -467,3 +467,11 @@ set noswapfile
     " => ack.vim
     """"""""""""""""""""""""""""""
     let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+
+    """"""""""""""""""""""""""""""
+    " => ColorV
+    """"""""""""""""""""""""""""""
+    au! BufWinEnter *.css call colorv#preview("S")
+    au! bufwritepost *.css call colorv#preview("S")
+    
+

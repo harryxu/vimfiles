@@ -85,3 +85,6 @@
 [submodule "addons/NrrwRgn"]
 	path = addons/NrrwRgn
 	url = git://github.com/chrisbra/NrrwRgn.git
+[submodule "addons/ColorV"]
+	path = addons/ColorV
+	url = https://github.com/Rykka/ColorV.git
