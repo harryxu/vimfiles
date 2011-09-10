@@ -81,7 +81,7 @@
 	url = https://github.com/hail2u/vim-css3-syntax.git
 [submodule "addons/snipmate-snippets"]
 	path = addons/snipmate-snippets
-	url = git://github.com/honza/snipmate-snippets.git
+	url = https://harryxu@github.com/harryxu/snipmate-snippets.git
 [submodule "addons/NrrwRgn"]
 	path = addons/NrrwRgn
 	url = git://github.com/chrisbra/NrrwRgn.git
