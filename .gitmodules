@@ -88,3 +88,6 @@
 [submodule "addons/ColorV"]
 	path = addons/ColorV
 	url = https://github.com/Rykka/ColorV.git
+[submodule "addons/neco-look"]
+	path = addons/neco-look
+	url = https://github.com/ujihisa/neco-look.git
