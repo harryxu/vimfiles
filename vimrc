@@ -131,15 +131,6 @@ endfunction
 " toggle menubar
 nmap ,m :call ToggleGO('m')<CR>
 
-function! CmdT()
-    if exists('t:NERDTreeBufName')
-        let ntroot = getbufvar(t:NERDTreeBufName, 'NERDTreeRoot')
-        execute 'CommandT ' . ntroot.path.str()
-    else
-        CommandT 
-    endif
-endfunction
-
 " open CommandT by NERDTree root path
 nmap ,t :call CmdT()<CR>
 
@@ -473,5 +464,17 @@ set noswapfile
     """"""""""""""""""""""""""""""
     au! BufWinEnter *.css call colorv#preview("S")
     au! bufwritepost *.css call colorv#preview("S")
-    
 
+    """"""""""""""""""""""""""""""
+    " => Command-t
+    """"""""""""""""""""""""""""""
+    let g:CommandTMaxHeight = 10
+
+    function! CmdT()
+        if exists('t:NERDTreeBufName')
+            let ntroot = getbufvar(t:NERDTreeBufName, 'NERDTreeRoot')
+            execute 'CommandT ' . ntroot.path.str()
+        else
+            CommandT 
+        endif
+    endfunction
