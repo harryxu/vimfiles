@@ -131,8 +131,6 @@ endfunction
 " toggle menubar
 nmap ,m :call ToggleGO('m')<CR>
 
-" open CommandT by NERDTree root path
-nmap ,t :call CmdT()<CR>
 
 set wildignore+=*.o,.git,.svn,*.jpg,*.gif,*.png,*.swf,*.psd,*.rar,*.zip,*.doc
 
@@ -478,3 +476,5 @@ set noswapfile
             CommandT 
         endif
     endfunction
+    " open CommandT by NERDTree root path
+    nmap ,t :call CmdT()<CR>
