@@ -37,9 +37,6 @@
 [submodule "addons/command-t"]
 	path = addons/command-t
 	url = git://git.wincent.com/command-t.git
-[submodule "addons/fuzzyfinder"]
-	path = addons/fuzzyfinder
-	url = https://github.com/vim-scripts/FuzzyFinder.git
 [submodule "addons/vim-indent-guides"]
 	path = addons/vim-indent-guides
 	url = https://github.com/nathanaelkane/vim-indent-guides.git
