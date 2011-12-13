@@ -51,7 +51,7 @@
 	url = https://github.com/kevinw/pyflakes-vim.git
 [submodule "addons/snipmate"]
 	path = addons/snipmate
-	url = git@github.com:harryxu/snipmate.vim.git
+	url = git://github.com/harryxu/snipmate.vim.git
 [submodule "addons/vim-addon-mw-utils"]
 	path = addons/vim-addon-mw-utils
 	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
@@ -88,3 +88,9 @@
 [submodule "addons/neco-look"]
 	path = addons/neco-look
 	url = https://github.com/ujihisa/neco-look.git
+[submodule "addons/html5.vim"]
+	path = addons/html5.vim
+	url = https://github.com/othree/html5.vim.git
+[submodule "addons/vim-less"]
+	path = addons/vim-less
+	url = https://github.com/groenewege/vim-less.git
