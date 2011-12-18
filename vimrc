@@ -236,7 +236,7 @@ map <A-l> <C-W>L
 imap <C-j> <ESC>
 vmap <C-j> <ESC>
 
-map <A-`> <C-^>
+map <A-1> <C-^>
 
 " Open the definition in a new tab
 map <F5> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
@@ -478,3 +478,21 @@ set noswapfile
     endfunction
     " open CommandT by NERDTree root path
     nmap ,t :call CmdT()<CR>
+
+    """"""""""""""""""""""""""""""
+    " => Vimwiki
+    """"""""""""""""""""""""""""""
+    " 多个维基项目的配置
+    let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki',
+                \ 'template_path': '~/Dropbox/vimwiki/_tpl/',
+                \ 'template_default': 'default',
+                \ 'template_ext': '.html'}]
+     
+    " 对中文用户来说，我们并不怎么需要驼峰英文成为维基词条
+    let g:vimwiki_camel_case = 0
+     
+    " 标记为完成的 checklist 项目会有特别的颜色
+    let g:vimwiki_hl_cb_checked = 1
+     
+    " 是否在计算字串长度时用特别考虑中文字符
+    let g:vimwiki_CJK_length = 1
