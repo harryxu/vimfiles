@@ -254,6 +254,14 @@ set nowb
 set noswapfile
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Python virtualenv
+" http://blag.felixhummel.de/vim/django_completion.html
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if filereadable($VIRTUAL_ENV . '/.vimrc')
+    source $VIRTUAL_ENV/.vimrc
+endif
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Text options
