@@ -19,9 +19,6 @@
 [submodule "addons/zencoding"]
 	path = addons/zencoding
 	url = https://github.com/mattn/zencoding-vim.git
-[submodule "addons/bufexplorer"]
-	path = addons/bufexplorer
-	url = https://github.com/vim-scripts/bufexplorer.zip.git
 [submodule "addons/vim-fugitive"]
 	path = addons/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
@@ -94,3 +91,9 @@
 [submodule "addons/vim-less"]
 	path = addons/vim-less
 	url = https://github.com/groenewege/vim-less.git
+[submodule "addons/gist-vim"]
+	path = addons/gist-vim
+	url = https://github.com/mattn/gist-vim.git
+[submodule "addons/vim-powerline"]
+	path = addons/vim-powerline
+	url = https://github.com/Lokaltog/vim-powerline.git

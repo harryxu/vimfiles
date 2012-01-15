@@ -165,7 +165,8 @@ else
     "set guifont=Monaco\ 10
     "set guifont=Bitstream\ Vera\ Sans\ Mono\ Bold\ 12
     "set guifont=Bitstream\ Vera\ Sans\ Mono\ 11
-    set guifont=Inconsolata\ 13
+    "set guifont=Inconsolata\ 13
+    set guifont=Inconsolata\ for\ Powerline\ 13
     "set guifont=Anonymous\ Pro\ Bold\ 12
     "set guifont=DejaVu\ Sans\ Mono\ 11
     set gfw=WenQuanYi\Micro\Hei\ 12
@@ -181,8 +182,10 @@ if (has('Win32'))
     colorscheme fu
 elseif (has('gui_running'))
     colorscheme railscasts
+    let g:Powerline_symbols = 'fancy'
 else
     colorscheme darkblue
+    let g:Powerline_symbols = 'compatible'
 endif
 
 
@@ -306,6 +309,9 @@ endif
     "let php_sql_query = 1
     let php_alt_blocks = 0
     au FileType php imap ,, ->
+
+    " phpDocumentor
+    au FileType php nmap <C-P> :call PhpDocSingle()<CR> 
     "let php_strict_blocks = 0
 
     """"""""""""""""""""""""""""""
@@ -367,14 +373,6 @@ endif
     " fix snippets_dir on windows
 
     au BufRead *.snippets :set nofoldenable
-
-    """"""""""""""""""""""""""""""
-    " fuzzy finder
-    """"""""""""""""""""""""""""""
-    nmap ,b :FufBuffer<CR>
-    nmap ,f :FufFile<CR>
-    nmap ,d :FufDir<CR>
-    nmap ,l :FufLine<CR>
     
     """"""""""""""""""""""""""""""
     " xmledit
@@ -386,11 +384,6 @@ endif
     " miniBufExpl
     """"""""""""""""""""""""""""""
     let g:miniBufExplMapCTabSwitchBufs = 1 
-
-    """"""""""""""""""""""""""""""
-    " phpDocumentor
-    """"""""""""""""""""""""""""""
-    nmap <C-P> :call PhpDocSingle()<CR> 
 
     """"""""""""""""""""""""""""""
     " autocomplpop
@@ -504,3 +497,9 @@ endif
      
     " 是否在计算字串长度时用特别考虑中文字符
     let g:vimwiki_CJK_length = 1
+
+    """"""""""""""""""""""""""""""
+    " => Indent Guides
+    """"""""""""""""""""""""""""""
+    let g:indent_guides_start_level = 2
+    let g:indent_guides_guide_size = 1
