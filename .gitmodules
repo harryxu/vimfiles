@@ -94,3 +94,6 @@
 [submodule "addons/vim-powerline"]
 	path = addons/vim-powerline
 	url = https://github.com/Lokaltog/vim-powerline.git
+[submodule "addons/snipmate"]
+	path = addons/snipmate
+	url = https://github.com/garbas/vim-snipmate.git
