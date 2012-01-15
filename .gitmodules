@@ -31,9 +31,6 @@
 [submodule "addons/ack.vim"]
 	path = addons/ack.vim
 	url = https://github.com/mileszs/ack.vim.git
-[submodule "addons/command-t"]
-	path = addons/command-t
-	url = git://git.wincent.com/command-t.git
 [submodule "addons/vim-indent-guides"]
 	path = addons/vim-indent-guides
 	url = https://github.com/nathanaelkane/vim-indent-guides.git
