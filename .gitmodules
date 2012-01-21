@@ -13,9 +13,6 @@
 [submodule "addons/xmledit"]
 	path = addons/xmledit
 	url = http://github.com/sukima/xmledit.git
-[submodule "addons/vim-addon-manager-known-repositories"]
-	path = addons/vim-addon-manager-known-repositories
-	url = http://github.com/MarcWeber/vim-addon-manager-known-repositories.git
 [submodule "addons/zencoding"]
 	path = addons/zencoding
 	url = https://github.com/mattn/zencoding-vim.git
