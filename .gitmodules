@@ -49,9 +49,6 @@
 [submodule "addons/vim-session"]
 	path = addons/vim-session
 	url = git://github.com/xolox/vim-session.git
-[submodule "addons/solarized"]
-	path = addons/solarized
-	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "addons/unite.vim"]
 	path = addons/unite.vim
 	url = https://github.com/Shougo/unite.vim.git
