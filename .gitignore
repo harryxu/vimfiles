@@ -12,6 +12,8 @@ doc/tags*
 /session
 /sessions
 
+/build
+
 /bash-support/doc
 
 /ftplugin/html.vim
