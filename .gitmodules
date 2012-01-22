@@ -34,9 +34,6 @@
 [submodule "addons/pydoc.vim"]
 	path = addons/pydoc.vim
 	url = https://github.com/fs111/pydoc.vim.git
-[submodule "addons/tabular"]
-	path = addons/tabular
-	url = https://github.com/godlygeek/tabular.git
 [submodule "addons/pyflakes"]
 	path = addons/pyflakes
 	url = https://github.com/kevinw/pyflakes-vim.git
