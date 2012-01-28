@@ -88,3 +88,6 @@
 [submodule "addons/command-t"]
 	path = addons/command-t
 	url = https://github.com/wincent/Command-T.git
+[submodule "addons/delimitMate"]
+	path = addons/delimitMate
+	url = https://github.com/Raimondi/delimitMate.git
