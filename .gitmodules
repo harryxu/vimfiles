@@ -91,3 +91,6 @@
 [submodule "addons/delimitMate"]
 	path = addons/delimitMate
 	url = https://github.com/Raimondi/delimitMate.git
+[submodule "addons/vim-gummybears-colorscheme"]
+	path = addons/vim-gummybears-colorscheme
+	url = https://github.com/jelera/vim-gummybears-colorscheme.git
