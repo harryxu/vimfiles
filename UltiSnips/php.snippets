@@ -1,0 +1,37 @@
+snippet php "Normal php file start" b
+<?php
+$1
+endsnippet
+
+snippet phpl "Inline php tag"
+<?php ${1:echo} $2; ?>
+endsnippet
+
+snippet phpb "PHP tag block" b
+<?php
+$1
+?>
+endsnippet
+
+snippet fun "PHP function" !b
+${1:public} function ${2:fun}($3)
+{
+    $4
+}
+endsnippet
+
+snippet vd "var_dump"
+var_dump($1);
+endsnippet
+
+snippet evd "var_dump in exit"
+exit(var_dump($1));
+endsnippet
+
+snippet kv "key => value for array"
+'${1:key}' => ${2:value},
+endsnippet
+
+snippet kvs "key => 'str value' for array"
+'${1:key}' => '${2:value}',
+endsnippet

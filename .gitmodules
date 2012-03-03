@@ -103,3 +103,6 @@
 [submodule "addons/ctrlp.vim"]
 	path = addons/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
+[submodule "addons/ultisnips"]
+	path = addons/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
