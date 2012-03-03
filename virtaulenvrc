@@ -1,3 +1,5 @@
+" http://blag.felixhummel.de/vim/django_completion.html
+
 py << EOF
 import os.path
 import sys
