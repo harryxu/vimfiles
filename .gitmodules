@@ -94,3 +94,9 @@
 [submodule "addons/vim-gummybears-colorscheme"]
 	path = addons/vim-gummybears-colorscheme
 	url = https://github.com/jelera/vim-gummybears-colorscheme.git
+[submodule "addons/Vim-Tomorrow-Theme"]
+	path = addons/Vim-Tomorrow-Theme
+	url = https://github.com/chriskempson/Vim-Tomorrow-Theme.git
+[submodule "addons/vim-easymotion"]
+	path = addons/vim-easymotion
+	url = https://github.com/Lokaltog/vim-easymotion.git

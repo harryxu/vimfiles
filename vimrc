@@ -166,9 +166,9 @@ else
     "set guifont=Bitstream\ Vera\ Sans\ Mono\ Bold\ 12
     "set guifont=Bitstream\ Vera\ Sans\ Mono\ 11
     "set guifont=Inconsolata\ 13
-    set guifont=Inconsolata\ for\ Powerline\ 13
+    "set guifont=Inconsolata\ for\ Powerline\ 13
     "set guifont=Anonymous\ Pro\ Bold\ 12
-    "set guifont=DejaVu\ Sans\ Mono\ 11
+    set guifont=DejaVu\ Sans\ Mono\ 11
     set gfw=WenQuanYi\Micro\Hei\ 12
     "set gfw=WenQuanYi\Zen\Hei\ 11
     set linespace=2 
@@ -503,3 +503,9 @@ endif
     """"""""""""""""""""""""""""""
     let g:indent_guides_start_level = 2
     let g:indent_guides_guide_size = 1
+    
+    """"""""""""""""""""""""""""""
+    " => vim-easymotion
+    """"""""""""""""""""""""""""""
+    nmap ,w <leader><leader>w
+    nmap ,f <leader><leader>f
