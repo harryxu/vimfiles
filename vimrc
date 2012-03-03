@@ -311,7 +311,7 @@ endif
     au FileType php imap ,, ->
 
     " phpDocumentor
-    au FileType php nmap <C-P> :call PhpDocSingle()<CR> 
+    "au FileType php nmap <C-S-P> :call PhpDocSingle()<CR> 
     "let php_strict_blocks = 0
 
     """"""""""""""""""""""""""""""
