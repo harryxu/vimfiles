@@ -509,3 +509,11 @@ endif
     """"""""""""""""""""""""""""""
     nmap ,w <leader><leader>w
     nmap ,f <leader><leader>f
+    
+    """"""""""""""""""""""""""""""
+    " => UltiSnips
+    """"""""""""""""""""""""""""""
+    let g:UltiSnipsExpandTrigger="<tab>"
+    let g:UltiSnipsJumpForwardTrigger="<tab>"
+    let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+    
