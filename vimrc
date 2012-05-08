@@ -165,10 +165,10 @@ else
     "set guifont=Monaco\ 10
     "set guifont=Bitstream\ Vera\ Sans\ Mono\ Bold\ 12
     "set guifont=Bitstream\ Vera\ Sans\ Mono\ 11
-    "set guifont=Inconsolata\ 13
+    set guifont=Inconsolata\ 14
     "set guifont=Inconsolata\ for\ Powerline\ 13
     "set guifont=Anonymous\ Pro\ Bold\ 12
-    set guifont=DejaVu\ Sans\ Mono\ 11
+    "set guifont=DejaVu\ Sans\ Mono\ 11
     set gfw=WenQuanYi\Micro\Hei\ 12
     "set gfw=WenQuanYi\Zen\Hei\ 11
     set linespace=2 
@@ -182,10 +182,8 @@ if (has('Win32'))
     colorscheme fu
 elseif (has('gui_running'))
     colorscheme railscasts
-    let g:Powerline_symbols = 'fancy'
 else
     colorscheme darkblue
-    let g:Powerline_symbols = 'compatible'
 endif
 
 
@@ -326,7 +324,7 @@ endif
     """"""""""""""""""""""""""""""
     " yaml,xml,html 使用2个空格作为缩进 
     """"""""""""""""""""""""""""""
-    autocmd FileType html,xhtml,htmldjango,css,xml setlocal ts=2 sts=2 sw=2 expandtab
+    autocmd FileType html,xhtml,htmldjango,css,less,xml,jsp setlocal ts=2 sts=2 sw=2 expandtab
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -461,8 +459,8 @@ endif
     """"""""""""""""""""""""""""""
     " => ColorV
     """"""""""""""""""""""""""""""
-    au! BufWinEnter *.css call colorv#preview("S")
-    au! bufwritepost *.css call colorv#preview("S")
+    au! BufWinEnter *.css,*.less call colorv#preview("S")
+    au! bufwritepost *.css,*.less call colorv#preview("S")
 
     """"""""""""""""""""""""""""""
     " => Command-t
@@ -517,3 +515,6 @@ endif
     let g:UltiSnipsJumpForwardTrigger="<tab>"
     let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
     
+    """"""""""""""""""""""""""""""
+    " => vim Powerline
+    """"""""""""""""""""""""""""""

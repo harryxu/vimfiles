@@ -63,7 +63,7 @@
 	url = git://github.com/chrisbra/NrrwRgn.git
 [submodule "addons/ColorV"]
 	path = addons/ColorV
-	url = https://github.com/Rykka/ColorV.git
+	url = https://github.com/Rykka/colorv.vim.git
 [submodule "addons/neco-look"]
 	path = addons/neco-look
 	url = https://github.com/ujihisa/neco-look.git
@@ -100,3 +100,12 @@
 [submodule "addons/ultisnips"]
 	path = addons/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
+[submodule "addons/Hemisu"]
+	path = addons/Hemisu
+	url = https://github.com/noahfrederick/Hemisu.git
+[submodule "addons/vim-colors-solarized"]
+	path = addons/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "addons/cocoa.vim"]
+	path = addons/cocoa.vim
+	url = https://github.com/fomichev/cocoa.vim.git

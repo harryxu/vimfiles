@@ -3,14 +3,26 @@ snippet php "Normal php file start" b
 $1
 endsnippet
 
-snippet phpl "Inline php tag"
-<?php ${1:echo} $2; ?>
+snippet phpl "Inline php tag" i
+<?php ${1:echo} $2 ?>
 endsnippet
 
 snippet phpb "PHP tag block" b
 <?php
 $1
 ?>
+endsnippet
+
+snippet phpfe "PHP foreach tpl"
+<?php foreach (${1:$list} as ${2:$item}): ?>
+    $3
+<?php endforeach; ?>
+endsnippet
+
+snippet phpif "PHP if tpl"
+<?php if (${1:something}): ?>
+    $3
+<?php endif; ?>
 endsnippet
 
 snippet fun "PHP function" !b
