@@ -106,3 +106,6 @@
 [submodule "addons/cocoa.vim"]
 	path = addons/cocoa.vim
 	url = https://github.com/fomichev/cocoa.vim.git
+[submodule "addons/vim-autoclose"]
+	path = addons/vim-autoclose
+	url = https://harryxu@github.com/harryxu/vim-autoclose.git
