@@ -25,7 +25,14 @@ snippet phpif "PHP if tpl"
 <?php endif; ?>
 endsnippet
 
-snippet fun "PHP function" !b
+snippet func "PHP function" !b
+function ${2:fun}($3)
+{
+    $4
+}
+endsnippet
+
+snippet fun "PHP method in class" !b
 ${1:public} function ${2:fun}($3)
 {
     $4
