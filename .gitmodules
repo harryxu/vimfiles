@@ -109,3 +109,6 @@
 [submodule "addons/vim-autoclose"]
 	path = addons/vim-autoclose
 	url = https://harryxu@github.com/harryxu/vim-autoclose.git
+[submodule "addons/mac-classic-theme"]
+	path = addons/mac-classic-theme
+	url = https://github.com/nelstrom/vim-mac-classic-theme.git
