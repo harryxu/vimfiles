@@ -54,3 +54,9 @@ endsnippet
 snippet kvs "key => 'str value' for array"
 '${1:key}' => '${2:value}',
 endsnippet
+
+snippet foreach "foreach" !b
+foreach ($${1:sets} as $${2:item}) {
+    ${3://code}
+}
+endsnippet
