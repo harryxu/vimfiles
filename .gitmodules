@@ -112,3 +112,6 @@
 [submodule "addons/mac-classic-theme"]
 	path = addons/mac-classic-theme
 	url = https://github.com/nelstrom/vim-mac-classic-theme.git
+[submodule "addons/matchit"]
+	path = addons/matchit
+	url = https://github.com/edsono/vim-matchit.git
