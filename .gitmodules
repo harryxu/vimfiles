@@ -112,3 +112,6 @@
 [submodule "addons/matchit"]
 	path = addons/matchit
 	url = https://github.com/edsono/vim-matchit.git
+[submodule "addons/statline"]
+	path = addons/statline
+	url = https://github.com/harryxu/vim-statline.git
