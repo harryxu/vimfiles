@@ -8,8 +8,15 @@ hi CursorLine                     guibg=#1B1B1B
 hi CursorColumn                   guibg=#1B1B1B
 hi ColorColumn                    guibg=#1B1B1B
 hi LineNr           guifg=#AAAAAA guibg=#1B1B1B
-hi NonText          guifg=#BCBCBC gui=none
+hi NonText          guifg=#3F3F3F gui=none
 hi Cursor           guifg=#000000 guibg=#A7A7A7
+
+hi Pmenu            guifg=#FF6600 guibg=#000000 ctermfg=1 ctermbg=4
+hi PmenuSel         guifg=#FFFFFF guibg=#990000
+hi PmenuSbar        guibg=#707070 guifg=fg gui=NONE
+hi PmenuThumb       guibg=#d0d0d0 guifg=bg gui=NONE
+
+hi Visual           guibg=#01005F ctermbg=60 gui=NONE
 
 hi Keyword          guifg=#CDA869 gui=none
 hi String           guifg=#8F9D6A gui=none
@@ -17,13 +24,14 @@ hi String           guifg=#8F9D6A gui=none
 hi Constant         guifg=#cf6b4c gui=none
 hi String           guifg=#8f9d6a gui=none
 hi htmlTagName      guifg=#9b703f gui=none
-hi Identifier       guifg=#9b703f gui=none
+hi Identifier       guifg=#7587A6 gui=none
 hi Statement        guifg=#cda869 gui=none
-hi PreProc          guifg=#ff80ff gui=none
+hi PreProc          guifg=#DAD085 gui=none
 hi Type             guifg=#F9EE98 gui=none
 hi Function         guifg=#dad085 gui=none
 hi Repeat           guifg=#CDA869 gui=none
-hi Operator         guifg=#f8f8f8 gui=none
+hi Operator         guifg=#EEEEEE gui=none
+hi Special          guifg=#EEEEEE gui=none
 
 hi link character       constant
 hi link number          constant
@@ -47,4 +55,18 @@ hi link Delimiter       Special
 hi link SpecialComment  Special
 hi link Debug           Special
 
+" php
+hi phpVarSelector       guifg=#7587A6
+hi phpQuoteSingle       guifg=#8f9d6a
+hi phpDefineFuncName    guifg=#9B703F
+hi link phpMemberHere   Identifier
+hi link phpQuoteDouble  String
 
+" xml html
+hi xmlTag               guifg=#9B703F ctermfg=179 gui=NONE
+hi xmlTagName           guifg=#9B703F ctermfg=179 gui=NONE
+hi xmlEndTag            guifg=#9B703F ctermfg=179 gui=NONE
+hi link htmlTag         xmlTag
+hi link htmlTagName     xmlTagName
+hi link htmlEndTag      xmlEndTag
+hi link htmlArg         xmlTag

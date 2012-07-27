@@ -115,3 +115,6 @@
 [submodule "addons/statline"]
 	path = addons/statline
 	url = https://github.com/harryxu/vim-statline.git
+[submodule "addons/vim-javascript"]
+	path = addons/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
