@@ -89,8 +89,6 @@ set statusline+=%#error#
 set statusline+=%{&paste?'[paste]':''}
 set statusline+=%*
 
-" display git current branch by fugitive
-set statusline+=%{fugitive#statusline()}
  
 set statusline+=%= "left/right separator
 set statusline+=%{StatuslineCurrentHighlight()}\ \ "current highlight
@@ -194,6 +192,9 @@ endif
 
 " 将F2键映射为取消字符串搜索后的高亮
 map <F2> :nohlsearch<CR>
+
+imap <F1> <ESC>
+map <F1> <ESC>
 
 " omni
 "imap <C-L> <C-x><C-o>
@@ -523,5 +524,11 @@ endif
     " => vim autoclose
     """"""""""""""""""""""""""""""
     let g:AutoClosePreserveDotReg = 0
+
+    """"""""""""""""""""""""""""""
+    " => vim statline
+    """"""""""""""""""""""""""""""
+    let g:statline_fugitive = 1
+    
 
 
