@@ -118,3 +118,6 @@
 [submodule "addons/vim-javascript"]
 	path = addons/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
+[submodule "addons/syntastic"]
+	path = addons/syntastic
+	url = https://github.com/scrooloose/syntastic.git
