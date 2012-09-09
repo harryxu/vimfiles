@@ -14,21 +14,18 @@ hi Cursor           guifg=#000000 guibg=#A7A7A7
 hi Pmenu            guifg=#FF6600 guibg=#000000 ctermfg=1 ctermbg=4
 hi PmenuSel         guifg=#FFFFFF guibg=#990000
 hi PmenuSbar        guibg=#707070 guifg=fg gui=NONE
-hi PmenuThumb       guibg=#d0d0d0 guifg=bg gui=NONE
+hi PmenuThumb       guibg=#D0D0D0 guifg=bg gui=NONE
 
 hi Visual           guibg=#01005F ctermbg=60 gui=NONE
 
 hi Keyword          guifg=#CDA869 gui=none
+hi Constant         guifg=#CF6B4C gui=none
 hi String           guifg=#8F9D6A gui=none
-
-hi Constant         guifg=#cf6b4c gui=none
-hi String           guifg=#8f9d6a gui=none
-hi htmlTagName      guifg=#9b703f gui=none
 hi Identifier       guifg=#7587A6 gui=none
-hi Statement        guifg=#cda869 gui=none
+hi Statement        guifg=#CDA869 gui=none
 hi PreProc          guifg=#DAD085 gui=none
-hi Type             guifg=#F9EE98 gui=none
-hi Function         guifg=#dad085 gui=none
+hi Type             guifg=#C5AF75 gui=none
+hi Function         guifg=#DAD085 gui=none
 hi Repeat           guifg=#CDA869 gui=none
 hi Operator         guifg=#EEEEEE gui=none
 hi Special          guifg=#EEEEEE gui=none
@@ -57,8 +54,9 @@ hi link Debug           Special
 
 " php
 hi phpVarSelector       guifg=#7587A6
-hi phpQuoteSingle       guifg=#8f9d6a
+hi phpQuoteSingle       guifg=#8F9D6A
 hi phpDefineFuncName    guifg=#9B703F
+hi phpRegionDelimiter   guifg=#666666
 hi link phpMemberHere   Identifier
 hi link phpQuoteDouble  String
 
@@ -70,3 +68,8 @@ hi link htmlTag         xmlTag
 hi link htmlTagName     xmlTagName
 hi link htmlEndTag      xmlEndTag
 hi link htmlArg         xmlTag
+
+" CSS
+hi link cssTagName      xmlTagName
+hi link cssClassName    String
+hi link cssIdentifier   Identifier
