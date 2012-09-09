@@ -28,7 +28,7 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "Set to auto read when a file is changed from the outside
-"set autoread
+set autoread
 
 "Have the mouse enabled all the time:
 set mouse=a
@@ -529,6 +529,11 @@ endif
     " => vim statline
     """"""""""""""""""""""""""""""
     let g:statline_fugitive = 1
+
+    """"""""""""""""""""""""""""""
+    " => Syntastic
+    """"""""""""""""""""""""""""""
+    let g:syntastic_javascript_checker = "jshint"
     
 
 
