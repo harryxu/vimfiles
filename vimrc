@@ -234,10 +234,6 @@ map <A-j> <C-W>J
 map <A-h> <C-W>H
 map <A-l> <C-W>L
 
-" map ctrl j to esc
-imap <C-j> <ESC>
-vmap <C-j> <ESC>
-
 map <A-1> <C-^>
 
 " Open the definition in a new tab
@@ -536,4 +532,8 @@ endif
     let g:syntastic_javascript_checker = "jshint"
     
 
+let g:syntastic_mode_map = {
+    \ 'mode': 'active',
+    \ 'active_filetypes': [],
+    \ 'passive_filetypes': ['css']}
 
