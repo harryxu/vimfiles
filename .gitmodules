@@ -121,3 +121,6 @@
 [submodule "addons/syntastic"]
 	path = addons/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "addons/webapi"]
+	path = addons/webapi
+	url = https://github.com/mattn/webapi-vim.git
