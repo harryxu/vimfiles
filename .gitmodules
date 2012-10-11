@@ -84,7 +84,7 @@
 	url = https://github.com/jelera/vim-gummybears-colorscheme.git
 [submodule "addons/Vim-Tomorrow-Theme"]
 	path = addons/Vim-Tomorrow-Theme
-	url = https://github.com/chriskempson/Vim-Tomorrow-Theme.git
+	url = https://github.com/chriskempson/vim-tomorrow-theme.git
 [submodule "addons/vim-easymotion"]
 	path = addons/vim-easymotion
 	url = https://github.com/Lokaltog/vim-easymotion.git
@@ -105,7 +105,7 @@
 	url = https://github.com/fomichev/cocoa.vim.git
 [submodule "addons/vim-autoclose"]
 	path = addons/vim-autoclose
-	url = https://harryxu@github.com/harryxu/vim-autoclose.git
+	url = https://github.com/harryxu/vim-autoclose.git
 [submodule "addons/mac-classic-theme"]
 	path = addons/mac-classic-theme
 	url = https://github.com/nelstrom/vim-mac-classic-theme.git
