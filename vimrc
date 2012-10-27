@@ -156,6 +156,8 @@ if has('Win32')
     "set guifont=Bitstream_Vera_Sans_Mono:h11
     set guifont=Inconsolata:h12
     set linespace=1 
+elseif has('mac')
+    set guifont=Menlo:h15
 else
     "set guifont=Consolas\ Bold\ 13
     "set guifont=Consolas\ 13
