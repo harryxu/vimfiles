@@ -107,11 +107,11 @@ function! StatuslineCurrentHighlight()
     endif
 endfunction
 
-set nofoldenable
+"set nofoldenable
 "选择代码折叠类型
-"set foldmethod=syntax
+set foldmethod=syntax
 "启动vim时不要自动折叠代码
-"set foldlevel=100
+set foldlevel=100
 
 "hide menubar and toolbar
 set go-=m
@@ -157,7 +157,7 @@ if has('Win32')
     set guifont=Inconsolata:h12
     set linespace=1 
 elseif has('mac')
-    set guifont=Menlo:h15
+    set guifont=Menlo:h17
 else
     "set guifont=Consolas\ Bold\ 13
     "set guifont=Consolas\ 13
@@ -236,7 +236,11 @@ map <A-j> <C-W>J
 map <A-h> <C-W>H
 map <A-l> <C-W>L
 
-map <A-1> <C-^>
+if has('mac')
+    map <C-W> <C-^>
+else
+    map <A-1> <C-^>
+endif
 
 " Open the definition in a new tab
 map <F5> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
@@ -344,7 +348,7 @@ endif
 
     " ctags
     set tags+=tags;/
-    au FileType php set tags+=~/workspaces/www/d/.tags
+    au FileType php set tags+=~/workspace/www/d/.tags
 
     """"""""""""""""""""""""""""""
     " NERDTree 
@@ -441,7 +445,7 @@ endif
     if !exists('g:neocomplcache_omni_patterns')
         let g:neocomplcache_omni_patterns = {}
     endif
-    let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
+    "let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 
     if !exists('g:neocomplcache_force_omni_patterns')
         let g:neocomplcache_force_omni_patterns = {}
@@ -545,3 +549,12 @@ let g:syntastic_mode_map = {
     \ 'active_filetypes': [],
     \ 'passive_filetypes': ['css']}
 
+" ------------------------------------------------------------------
+" Solarized Colorscheme Config
+" ------------------------------------------------------------------
+let g:solarized_contrast = "low"
+let g:solarized_visibility = "low"
+let g:solarized_bold = 0
+"set background=light
+"colorscheme solarized
+" ------------------------------------------------------------------
