@@ -127,3 +127,6 @@
 [submodule "addons/molokai"]
 	path = addons/molokai
 	url = https://github.com/tomasr/molokai.git
+[submodule "addons/kolor"]
+	path = addons/kolor
+	url = https://github.com/zeis/vim-kolor.git
