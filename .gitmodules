@@ -73,9 +73,6 @@
 [submodule "addons/gist-vim"]
 	path = addons/gist-vim
 	url = https://github.com/mattn/gist-vim.git
-[submodule "addons/command-t"]
-	path = addons/command-t
-	url = https://github.com/wincent/Command-T.git
 [submodule "addons/vim-gummybears-colorscheme"]
 	path = addons/vim-gummybears-colorscheme
 	url = https://github.com/jelera/vim-gummybears-colorscheme.git
