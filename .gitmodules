@@ -34,9 +34,6 @@
 [submodule "addons/pydoc.vim"]
 	path = addons/pydoc.vim
 	url = https://github.com/fs111/pydoc.vim.git
-[submodule "addons/vim-addon-mw-utils"]
-	path = addons/vim-addon-mw-utils
-	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
 [submodule "addons/tlib_vim"]
 	path = addons/tlib_vim
 	url = https://github.com/tomtom/tlib_vim.git
