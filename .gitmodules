@@ -121,3 +121,6 @@
 [submodule "addons/kolor"]
 	path = addons/kolor
 	url = https://github.com/zeis/vim-kolor.git
+[submodule "addons/MatchTag"]
+	path = addons/MatchTag
+	url = https://github.com/gregsexton/MatchTag.git
