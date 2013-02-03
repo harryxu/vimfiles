@@ -124,3 +124,6 @@
 [submodule "addons/MatchTag"]
 	path = addons/MatchTag
 	url = https://github.com/gregsexton/MatchTag.git
+[submodule "addons/php.vim"]
+	path = addons/php.vim
+	url = https://github.com/StanAngeloff/php.vim.git
