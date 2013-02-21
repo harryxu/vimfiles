@@ -9,7 +9,7 @@ call pathogen#runtime_append_all_bundles("addons")
 filetype off
 filetype plugin indent on
 
-set modelines=0
+set modelines=1
 
 if has('Win32')
     source $VIMRUNTIME/vimrc_example.vim
@@ -52,14 +52,13 @@ endif
 " 横向滚动条
 "set go+=b
 
-" 搜索忽略大小写 ="
-set ignorecase
-
 set showcmd "show incomplete cmds down the bottom
 set showmode "show current mode down the bottom
  
+set ignorecase
 set incsearch "find the next match as we type the search
 set hlsearch "hilight searches by default
+set smartcase
 
 set wildmenu
 set completeopt=menuone,longest
@@ -177,15 +176,14 @@ endif
 " 打开代码高亮
 syntax enable
 
-" 配色方案
-if (has('Win32'))
-    colorscheme fu
-elseif (has('gui_running'))
-    colorscheme railscasts
-else
-    colorscheme darkblue
-endif
-
+" ------------------------------------------------------------------
+" Solarized Colorscheme Config
+" ------------------------------------------------------------------
+let g:solarized_bold=0    "default value is 1
+let g:solarized_contrast="high"    "default value is normal
+syntax enable
+set background=dark
+colorscheme solarized
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -199,7 +197,7 @@ imap <F1> <ESC>
 map <F1> <ESC>
 
 " omni
-"imap <C-L> <C-x><C-o>
+imap <C-L> <C-x><C-o>
 
 " 插入当前时间
 :imap <C-D> <c-r>=strftime("<%Y-%m-%d %a %H:%M:%S>") . " harry"<CR>
@@ -223,6 +221,9 @@ vmap <S-Insert>         <C-V>
 " Ctrl c 复制到剪切板
 vnoremap <C-C> "+y
 
+nmap j gj
+nmap k gk
+
 " move on windows
 map <C-I> <C-W>k
 map <C-J> <C-W>j
@@ -237,7 +238,7 @@ map <A-h> <C-W>H
 map <A-l> <C-W>L
 
 if has('mac')
-    map <C-W> <C-^>
+    "map <C-W> <C-^>
 else
     map <A-1> <C-^>
 endif
@@ -310,6 +311,8 @@ endif
     "let php_sql_query = 1
     let php_alt_blocks = 0
     au FileType php imap ,, ->
+
+    au BufRead *.blade.php setlocal ts=2 sts=2 sw=2
 
     " phpDocumentor
     "au FileType php nmap <C-S-P> :call PhpDocSingle()<CR> 
@@ -405,20 +408,12 @@ endif
     """"""""""""""""""""""""""""""
     " => Minibuffer plugin
     """"""""""""""""""""""""""""""
-    let g:miniBufExplModSelTarget = 0
-    "let g:miniBufExplUseSingleClick = 1
-    let g:miniBufExplMapWindowNavVim = 1
-    let g:miniBufExplVSplit = 25
-    let g:miniBufExplSplitBelow=1
-    let g:miniBufExplorerAutoUpdate = 0
 
+
+    let g:miniBufExplMaxSize = 1
 
     let g:bufExplorerSortBy = "name"
 
-    """"""""""""""""""""""""""""""
-    " => SuperTab
-    """"""""""""""""""""""""""""""
-    "let g:SuperTabMappingForward = '<C-J>'
         
     """"""""""""""""""""""""""""""
     " => Zen Coding
@@ -450,7 +445,7 @@ endif
     if !exists('g:neocomplcache_force_omni_patterns')
         let g:neocomplcache_force_omni_patterns = {}
     endif
-    let g:neocomplcache_force_omni_patterns.php = '[^. *\t]\.\w*\|\h\w*::'
+    "let g:neocomplcache_force_omni_patterns.php = '[^. *\t]\.\w*\|\h\w*::'
 
     "let g:neocomplcache_disable_auto_complete = 1
     "
@@ -542,12 +537,13 @@ endif
     " => Syntastic
     """"""""""""""""""""""""""""""
     let g:syntastic_javascript_checker = "jshint"
+    let g:syntastic_python_checker = 'flake8'
     
 
 let g:syntastic_mode_map = {
     \ 'mode': 'active',
     \ 'active_filetypes': [],
-    \ 'passive_filetypes': ['css']}
+    \ 'passive_filetypes': ['css', 'html']}
 
 " ------------------------------------------------------------------
 " Solarized Colorscheme Config
