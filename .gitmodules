@@ -28,9 +28,6 @@
 [submodule "addons/ack.vim"]
 	path = addons/ack.vim
 	url = https://github.com/mileszs/ack.vim.git
-[submodule "addons/vim-indent-guides"]
-	path = addons/vim-indent-guides
-	url = https://github.com/nathanaelkane/vim-indent-guides.git
 [submodule "addons/pydoc.vim"]
 	path = addons/pydoc.vim
 	url = https://github.com/fs111/pydoc.vim.git
