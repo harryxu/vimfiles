@@ -127,3 +127,6 @@
 [submodule "addons/php.vim"]
 	path = addons/php.vim
 	url = https://github.com/StanAngeloff/php.vim.git
+[submodule "addons/indentLine"]
+	path = addons/indentLine
+	url = https://github.com/Yggdroot/indentLine.git
