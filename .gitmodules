@@ -127,3 +127,6 @@
 [submodule "addons/indentLine"]
 	path = addons/indentLine
 	url = https://github.com/Yggdroot/indentLine.git
+[submodule "addons/tagbar-phpctags"]
+	path = addons/tagbar-phpctags
+	url = https://github.com/techlivezheng/tagbar-phpctags.git
