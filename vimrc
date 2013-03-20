@@ -330,7 +330,7 @@ endif
     """"""""""""""""""""""""""""""
     " yaml,xml,html 使用2个空格作为缩进 
     """"""""""""""""""""""""""""""
-    autocmd FileType html,xhtml,htmldjango,css,less,xml,jsp setlocal ts=2 sts=2 sw=2 expandtab
+    autocmd FileType html,xhtml,htmldjango,css,scss,less,xml,jsp setlocal ts=2 sts=2 sw=2 expandtab
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -350,8 +350,8 @@ endif
     imap <F4> <ESC>:TagbarToggle<CR>
 
     " ctags
-    set tags+=tags;/
-    au FileType php set tags+=~/workspace/www/d/.tags
+    set tags=./tags;/
+    au FileType php set tags+=~/workspace/www/d/tags
 
     """"""""""""""""""""""""""""""
     " NERDTree 
@@ -540,17 +540,9 @@ endif
     let g:syntastic_python_checker = 'flake8'
     
 
-let g:syntastic_mode_map = {
-    \ 'mode': 'active',
-    \ 'active_filetypes': [],
-    \ 'passive_filetypes': ['css', 'html']}
+    let g:syntastic_mode_map = {
+        \ 'mode': 'active',
+        \ 'active_filetypes': [],
+        \ 'passive_filetypes': ['css', 'html']}
 
-" ------------------------------------------------------------------
-" Solarized Colorscheme Config
-" ------------------------------------------------------------------
-let g:solarized_contrast = "low"
-let g:solarized_visibility = "low"
-let g:solarized_bold = 0
-"set background=light
-"colorscheme solarized
-" ------------------------------------------------------------------
+    let g:indentLine_indentLevel = 5
