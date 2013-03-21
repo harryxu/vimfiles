@@ -42,7 +42,8 @@ vim_global_defaults = dict(maxTagsFileSize = 1024*1024*7,
                            CtagsCmd = "ctags",
                            TagsFile = "tags",
                            Disabled = 0,
-                           StopAt = 0)
+                           StopAt = 0,
+                           LangConf = {})
 
 # Just in case the ViM build you're using doesn't have subprocess
 if sys.version < '2.4':
@@ -222,10 +223,28 @@ class AutoTag:
 
    def updateTagsFile(self, tagsDir, tagsFile, sources):
       self.stripTags(tagsFile, sources)
+      cmd = self.ctags_cmd
+
+      # Get language specified config by current filetype.
+      filetype = vim.eval('&ft')
+      lang_conf = vim_global('LangConf', dict)
+
+      if filetype in lang_conf:
+         conf = lang_conf[filetype]
+       
+         # override ctags command by language config
+         if 'ctags_cmd' in conf:
+            cmd = conf['ctags_cmd'];
+       
+         # add additional ctags options by language config
+         if 'ctags_options' in conf:
+            cmd += ' %s' % conf['ctags_options']
+       
       if self.tags_file:
-         cmd = "%s -f %s -a " % (self.ctags_cmd, self.tags_file)
+         cmd += " -f %s -a " % self.tags_file
       else:
-         cmd = "%s -a " % (self.ctags_cmd,)
+         cmd += " -a "
+
       for source in sources:
          if os.path.isfile(os.path.join(tagsDir, source)):
             cmd += ' "%s"' % source
@@ -268,5 +287,3 @@ augroup autotag
 augroup END
 
 endif " has("python")
-
-" vim:shiftwidth=3:ts=3
