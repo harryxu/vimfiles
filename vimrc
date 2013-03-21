@@ -348,6 +348,7 @@ endif
     """"""""""""""""""""""""""""""
     map <F4> :TagbarToggle<CR>
     imap <F4> <ESC>:TagbarToggle<CR>
+    let g:tagbar_phpctags_bin='/Users/harry/workspace/utils/phpctags/phpctags'
 
     " ctags
     set tags=./tags;/
@@ -483,30 +484,6 @@ endif
     nmap ,t :call CmdT()<CR>
 
     """"""""""""""""""""""""""""""
-    " => Vimwiki
-    """"""""""""""""""""""""""""""
-    " 多个维基项目的配置
-    let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki',
-                \ 'template_path': '~/Dropbox/vimwiki/_tpl/',
-                \ 'template_default': 'default',
-                \ 'template_ext': '.html'}]
-     
-    " 对中文用户来说，我们并不怎么需要驼峰英文成为维基词条
-    let g:vimwiki_camel_case = 0
-     
-    " 标记为完成的 checklist 项目会有特别的颜色
-    let g:vimwiki_hl_cb_checked = 1
-     
-    " 是否在计算字串长度时用特别考虑中文字符
-    let g:vimwiki_CJK_length = 1
-
-    """"""""""""""""""""""""""""""
-    " => Indent Guides
-    """"""""""""""""""""""""""""""
-    let g:indent_guides_start_level = 2
-    let g:indent_guides_guide_size = 1
-    
-    """"""""""""""""""""""""""""""
     " => vim-easymotion
     """"""""""""""""""""""""""""""
     nmap ,w <leader><leader>w
@@ -518,10 +495,6 @@ endif
     let g:UltiSnipsExpandTrigger="<tab>"
     let g:UltiSnipsJumpForwardTrigger="<tab>"
     let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-    
-    """"""""""""""""""""""""""""""
-    " => vim Powerline
-    """"""""""""""""""""""""""""""
 
     """"""""""""""""""""""""""""""
     " => vim autoclose
