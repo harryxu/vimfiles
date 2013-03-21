@@ -519,3 +519,10 @@ endif
         \ 'passive_filetypes': ['css', 'html']}
 
     let g:indentLine_indentLevel = 5
+
+    """"""""""""""""""""""""""""""
+    " => AutoTag
+    """"""""""""""""""""""""""""""
+    let g:autotagLangConf = {
+        \ 'php': { 'ctags_options': '--langmap=php:.engine.inc.module.theme.php' }
+    \ }
