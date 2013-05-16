@@ -156,7 +156,7 @@ if has('Win32')
     set guifont=Inconsolata:h12
     set linespace=1 
 elseif has('mac')
-    set guifont=Menlo:h17
+    set guifont=Menlo:h15
 else
     "set guifont=Consolas\ Bold\ 13
     "set guifont=Consolas\ 13
@@ -481,7 +481,7 @@ endif
         endif
     endfunction
     " open CommandT by NERDTree root path
-    nmap ,t :call CmdT()<CR>
+    "nmap ,t :call CmdT()<CR>
 
     """"""""""""""""""""""""""""""
     " => vim-easymotion

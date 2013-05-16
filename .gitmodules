@@ -130,3 +130,6 @@
 [submodule "addons/tagbar-phpctags"]
 	path = addons/tagbar-phpctags
 	url = https://github.com/techlivezheng/tagbar-phpctags.git
+[submodule "addons/YouCompleteMe"]
+	path = addons/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
