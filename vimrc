@@ -454,12 +454,13 @@ endif
     """"""""""""""""""""""""""""""
     " => Session manager
     """"""""""""""""""""""""""""""
-    let g:session_autosave = 1
+    let g:session_autosave = 'yes'
 
     """"""""""""""""""""""""""""""
     " => ack.vim
     """"""""""""""""""""""""""""""
-    let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+    "let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+    let g:ackprg = 'ag --nogroup --nocolor --column'
 
     """"""""""""""""""""""""""""""
     " => ColorV
@@ -518,6 +519,11 @@ endif
         \ 'active_filetypes': [],
         \ 'passive_filetypes': ['css', 'html']}
 
+
+    """"""""""""""""""""""""""""""
+    " => indentline
+    """"""""""""""""""""""""""""""
+    let g:indentLine_enabled = 0
     let g:indentLine_indentLevel = 5
 
     """"""""""""""""""""""""""""""
@@ -526,3 +532,10 @@ endif
     let g:autotagLangConf = {
         \ 'php': { 'ctags_options': '--langmap=php:.engine.inc.module.theme.php' }
     \ }
+
+    """"""""""""""""""""""""""""""
+    " => YouCompleteMe
+    """"""""""""""""""""""""""""""
+    let g:ycm_key_list_select_completion = ['<Down>']
+    let g:ycm_key_list_previous_completion = ['<Up>']
+    let g:ycm_filetype_whitelist = { 'python': 1 }
