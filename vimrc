@@ -198,7 +198,8 @@ imap <F1> <ESC>
 map <F1> <ESC>
 
 " omni
-imap <C-L> <C-x><C-o>
+" Add a C-p is for cancel select first item, this issue is cased by NeoComplCache.
+imap <C-L> <C-x><C-o><C-p> 
 
 " 插入当前时间
 :imap <C-D> <c-r>=strftime("<%Y-%m-%d %a %H:%M:%S>") . " harry"<CR>
@@ -421,14 +422,10 @@ endif
     " Use smartcase. 
     let g:NeoComplCache_SmartCase = 1
     let g:neocomplcache_caching_limit_file_size = 50000000
-    if !exists('g:neocomplcache_omni_patterns')
-        let g:neocomplcache_omni_patterns = {}
-    endif
-    "let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-
     if !exists('g:neocomplcache_force_omni_patterns')
         let g:neocomplcache_force_omni_patterns = {}
     endif
+    "let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
     let g:neocomplcache_force_omni_patterns.python = '[^. \t]\.\w*'
 
     "let g:neocomplcache_force_omni_patterns.php = '[^. *\t]\.\w*\|\h\w*::'
