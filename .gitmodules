@@ -127,6 +127,9 @@
 [submodule "addons/tagbar-phpctags"]
 	path = addons/tagbar-phpctags
 	url = https://github.com/techlivezheng/tagbar-phpctags.git
-[submodule "addons/YouCompleteMe"]
-	path = addons/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "addons/vim-multiple-cursors"]
+	path = addons/vim-multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors.git
+[submodule "addons/jedi"]
+	path = addons/jedi
+	url = https://github.com/davidhalter/jedi-vim.git

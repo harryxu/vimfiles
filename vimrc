@@ -61,7 +61,8 @@ set hlsearch "hilight searches by default
 set smartcase
 
 set wildmenu
-set completeopt=menuone,longest
+set completeopt=longest,menuone,preview
+set splitbelow
 
 set sessionoptions-=options
 
@@ -373,13 +374,6 @@ endif
     vmap ,c<space> <leader>c<space>
 
     """"""""""""""""""""""""""""""
-    " snipMate 
-    """"""""""""""""""""""""""""""
-    " fix snippets_dir on windows
-
-    au BufRead *.snippets :set nofoldenable
-    
-    """"""""""""""""""""""""""""""
     " xmledit
     """"""""""""""""""""""""""""""
     " jump to the beginning or end of the tag block 
@@ -391,15 +385,6 @@ endif
     let g:miniBufExplMapCTabSwitchBufs = 1 
 
     """"""""""""""""""""""""""""""
-    " autocomplpop
-    """"""""""""""""""""""""""""""
-    let g:acp_enableAtStartup = 0
-
-    if !exists('g:AutoComplPop_Behavior')
-        let g:AutoComplPop_Behavior = {}
-    endif
-
-    """"""""""""""""""""""""""""""
     " => bufExplorer plugin
     """"""""""""""""""""""""""""""
     let g:bufExplorerDefaultHelp=0
@@ -409,8 +394,6 @@ endif
     """"""""""""""""""""""""""""""
     " => Minibuffer plugin
     """"""""""""""""""""""""""""""
-
-
     let g:miniBufExplMaxSize = 1
 
     let g:bufExplorerSortBy = "name"
@@ -446,6 +429,8 @@ endif
     if !exists('g:neocomplcache_force_omni_patterns')
         let g:neocomplcache_force_omni_patterns = {}
     endif
+    let g:neocomplcache_force_omni_patterns.python = '[^. \t]\.\w*'
+
     "let g:neocomplcache_force_omni_patterns.php = '[^. *\t]\.\w*\|\h\w*::'
 
     "let g:neocomplcache_disable_auto_complete = 1
@@ -467,22 +452,6 @@ endif
     """"""""""""""""""""""""""""""
     au! BufWinEnter *.css,*.less call colorv#preview("S")
     au! bufwritepost *.css,*.less call colorv#preview("S")
-
-    """"""""""""""""""""""""""""""
-    " => Command-t
-    """"""""""""""""""""""""""""""
-    let g:CommandTMaxHeight = 10
-
-    function! CmdT()
-        if exists('t:NERDTreeBufName')
-            let ntroot = getbufvar(t:NERDTreeBufName, 'NERDTreeRoot')
-            execute 'CommandT ' . ntroot.path.str()
-        else
-            CommandT 
-        endif
-    endfunction
-    " open CommandT by NERDTree root path
-    "nmap ,t :call CmdT()<CR>
 
     """"""""""""""""""""""""""""""
     " => vim-easymotion
@@ -532,6 +501,15 @@ endif
     let g:autotagLangConf = {
         \ 'php': { 'ctags_options': '--langmap=php:.engine.inc.module.theme.php' }
     \ }
+
+    """"""""""""""""""""""""""""""
+    " => Jedi
+    """"""""""""""""""""""""""""""
+    let g:jedi#popup_select_first = 0
+    let g:jedi#auto_initialization = 1
+    let g:jedi#popup_on_dot = 0
+    let g:jedi#show_function_definition = "0"
+    "autocmd  FileType python let b:did_ftplugin = 1
 
     """"""""""""""""""""""""""""""
     " => YouCompleteMe
