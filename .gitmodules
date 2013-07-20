@@ -28,18 +28,12 @@
 [submodule "addons/pydoc.vim"]
 	path = addons/pydoc.vim
 	url = https://github.com/fs111/pydoc.vim.git
-[submodule "addons/tlib_vim"]
-	path = addons/tlib_vim
-	url = https://github.com/tomtom/tlib_vim.git
 [submodule "addons/vim-session"]
 	path = addons/vim-session
 	url = git://github.com/xolox/vim-session.git
 [submodule "addons/unite.vim"]
 	path = addons/unite.vim
 	url = https://github.com/Shougo/unite.vim.git
-[submodule "addons/unite-outline"]
-	path = addons/unite-outline
-	url = https://github.com/h1mesuke/unite-outline.git
 [submodule "addons/tagbar"]
 	path = addons/tagbar
 	url = https://github.com/majutsushi/tagbar.git
