@@ -127,3 +127,6 @@
 [submodule "addons/YouCompleteMe"]
 	path = addons/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "addons/emmet-vim"]
+	path = addons/emmet-vim
+	url = https://github.com/mattn/emmet-vim.git

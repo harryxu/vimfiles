@@ -408,6 +408,7 @@ endif
     \}
     " use ctrl+k to expand zencoding code
     imap <silent> <C-k> <ESC>:call Expand_zen()<CR>
+    vmap <C-k> <C-y>,
     fun Expand_zen()
         call feedkeys("\a")
         call feedkeys("\<C-y>,")
