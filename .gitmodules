@@ -127,3 +127,6 @@
 [submodule "addons/jedi"]
 	path = addons/jedi
 	url = https://github.com/davidhalter/jedi-vim.git
+[submodule "addons/YouCompleteMe"]
+	path = addons/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git

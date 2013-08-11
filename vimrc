@@ -418,7 +418,8 @@ endif
     " => NeoComplCache
     """"""""""""""""""""""""""""""
     " Use neocomplcache. 
-    let g:neocomplcache_enable_at_startup = 1
+    let g:neocomplcache_enable_at_startup = 0
+    au FileType markdown,text,gitcommit NeoComplCacheEnable
     " Use smartcase. 
     let g:NeoComplCache_SmartCase = 1
     let g:neocomplcache_caching_limit_file_size = 50000000
@@ -431,7 +432,6 @@ endif
     "let g:neocomplcache_force_omni_patterns.php = '[^. *\t]\.\w*\|\h\w*::'
 
     "let g:neocomplcache_disable_auto_complete = 1
-    "
 
     """"""""""""""""""""""""""""""
     " => Session manager
@@ -513,4 +513,21 @@ endif
     """"""""""""""""""""""""""""""
     let g:ycm_key_list_select_completion = ['<Down>']
     let g:ycm_key_list_previous_completion = ['<Up>']
-    let g:ycm_filetype_whitelist = { 'python': 1 }
+    let g:ycm_semantic_triggers =  {
+        \   'c' : ['->', '.'],
+        \   'objc' : ['->', '.'],
+        \   'ocaml' : ['.', '#'],
+        \   'cpp,objcpp' : ['->', '.', '::'],
+        \   'perl' : ['->'],
+        \   'php' : [],
+        \   'cs,java,javascript,d,vim,python,perl6,scala,vb,elixir,go' : ['.'],
+        \   'ruby' : ['.', '::'],
+        \   'lua' : ['.', ':'],
+        \   'erlang' : [':'],
+        \ }
+    "let g:ycm_filetype_whitelist = { 'python': 1 }
+    let g:ycm_filetype_blacklist = {
+      \ 'markdown' : 1,
+      \ 'text' : 1,
+      \ 'gitcommit' : 1,
+      \}
