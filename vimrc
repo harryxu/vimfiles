@@ -44,8 +44,12 @@ set cursorline
 
 if !has('Win32')
     set list
-    set listchars=tab:·\ ,eol:¬
+    set listchars=tab:·\ ,trail:•,eol:¬
 endif
+
+set shiftround
+set linebreak
+let &showbreak='↪ '
 
 
 
@@ -61,7 +65,7 @@ set hlsearch "hilight searches by default
 set smartcase
 
 set wildmenu
-set completeopt=longest,menuone,preview
+set completeopt=longest,menuone
 set splitbelow
 
 set sessionoptions-=options
@@ -199,7 +203,7 @@ map <F1> <ESC>
 
 " omni
 " Add a C-p is for cancel select first item, this issue is cased by NeoComplCache.
-imap <C-L> <C-x><C-o><C-p> 
+imap <C-L> <C-x><C-o><C-p>
 
 " 插入当前时间
 :imap <C-D> <c-r>=strftime("<%Y-%m-%d %a %H:%M:%S>") . " harry"<CR>
@@ -420,7 +424,7 @@ endif
     """"""""""""""""""""""""""""""
     " Use neocomplcache. 
     let g:neocomplcache_enable_at_startup = 0
-    au FileType markdown,text,gitcommit NeoComplCacheEnable
+    au FileType markdown,text,gitcommit,php,css,html NeoComplCacheEnable
     " Use smartcase. 
     let g:NeoComplCache_SmartCase = 1
     let g:neocomplcache_caching_limit_file_size = 50000000
@@ -531,4 +535,27 @@ endif
       \ 'markdown' : 1,
       \ 'text' : 1,
       \ 'gitcommit' : 1,
+      \ 'css' : 1,
+      \ 'html' : 1,
+      \ 'php' : 1,
       \}
+
+    
+    """"""""""""""""""""""""""""""
+    " => airline
+    """"""""""""""""""""""""""""""
+    let g:airline_left_sep = ''
+    let g:airline_right_sep = ''
+    let g:airline_linecolumn_prefix = '¶ '
+    let g:airline_branch_prefix = '⎇ '
+    let g:airline_paste_symbol = 'ρ'
+    let g:airline_whitespace_symbol = 'Ξ'
+
+    " enable/disable fugitive/lawrencium integration
+    let g:airline_enable_branch = 1
+
+    " enable/disable syntastic integration
+    let g:airline_enable_syntastic = 1
+
+    " enable/disable tagbar integration
+    let g:airline_enable_tagbar = 1

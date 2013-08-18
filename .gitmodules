@@ -130,3 +130,6 @@
 [submodule "addons/emmet-vim"]
 	path = addons/emmet-vim
 	url = https://github.com/mattn/emmet-vim.git
+[submodule "addons/vim-airline"]
+	path = addons/vim-airline
+	url = https://github.com/bling/vim-airline.git
