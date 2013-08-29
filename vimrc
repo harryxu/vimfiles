@@ -37,14 +37,14 @@ set mouse=a
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM userinterface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 显示行号 
+" 显示行号
 set nu
 
 set cursorline
 
 if !has('Win32')
     set list
-    set listchars=tab:·\ ,trail:•,eol:¬
+    set listchars=tab:·\ ,trail:·,eol:¬
 endif
 
 set shiftround
@@ -58,7 +58,7 @@ let &showbreak='↪ '
 
 set showcmd "show incomplete cmds down the bottom
 set showmode "show current mode down the bottom
- 
+
 set ignorecase
 set incsearch "find the next match as we type the search
 set hlsearch "hilight searches by default
@@ -76,24 +76,24 @@ set wrap linebreak
 
 "statusline setup
 set statusline=%f "tail of the filename
- 
+
 "display a warning if fileformat isnt unix
 set statusline+=\ [%{&ff}]
- 
+
 "display file encoding
 set statusline+=[%{&fenc}]
- 
+
 set statusline+=%h "help file flag
 set statusline+=%y "filetype
 set statusline+=%r "read only flag
 set statusline+=%m "modified flag
- 
+
 "display a warning if &paste is set
 set statusline+=%#error#
 set statusline+=%{&paste?'[paste]':''}
 set statusline+=%*
 
- 
+
 set statusline+=%= "left/right separator
 set statusline+=%{StatuslineCurrentHighlight()}\ \ "current highlight
 set statusline+=%c, "cursor column
@@ -141,7 +141,7 @@ set wildignore+=*.o,.git,.svn,*.jpg,*.gif,*.png,*.swf,*.psd,*.rar,*.zip,*.doc
 " Fileformats
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" 编码设定 
+" 编码设定
 set encoding=utf-8
 set fileencodings=utf-8,ucs-bom,gbk,gb2312,gb18030,cp936,default,latin1
 if has('Win32')
@@ -155,11 +155,11 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 if has('Win32')
-    " 代码字体和大小 
+    " 代码字体和大小
     "set guifont=YaHei_Consolas_Hybrid:h10.5
     "set guifont=Bitstream_Vera_Sans_Mono:h11
     set guifont=Inconsolata:h12
-    set linespace=1 
+    set linespace=1
 elseif has('mac')
     set guifont=Menlo:h15
 else
@@ -175,7 +175,7 @@ else
     "set guifont=DejaVu\ Sans\ Mono\ 11
     set gfw=WenQuanYi\Micro\Hei\ 12
     "set gfw=WenQuanYi\Zen\Hei\ 11
-    set linespace=2 
+    set linespace=2
 endif
 
 " 打开代码高亮
@@ -264,6 +264,10 @@ set nobackup
 set nowb
 set noswapfile
 
+" Automatically removing all trailing whitespace
+" http://vim.wikia.com/wiki/Remove_unwanted_spaces#Automatically_removing_all_trailing_whitespace
+nmap ,cw :%s/\s\+$//e<CR><C-O>
+"autocmd FileType c,cpp,java,php autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Python virtualenv
@@ -307,12 +311,12 @@ endif
     """"""""""""""""""""""""""""""
 
     """"""""""""""""""""""""""""""
-    " Python 
+    " Python
     """"""""""""""""""""""""""""""
     "autocmd FileType python set omnifunc=pythoncomplete#Complete
 
     """"""""""""""""""""""""""""""
-    " PHP 
+    " PHP
     """"""""""""""""""""""""""""""
     "let php_sql_query = 1
     let php_alt_blocks = 0
@@ -321,20 +325,20 @@ endif
     au BufRead *.blade.php setlocal ts=2 sts=2 sw=2
 
     " phpDocumentor
-    "au FileType php nmap <C-S-P> :call PhpDocSingle()<CR> 
+    "au FileType php nmap <C-S-P> :call PhpDocSingle()<CR>
     "let php_strict_blocks = 0
 
     """"""""""""""""""""""""""""""
-    " XML 
+    " XML
     """"""""""""""""""""""""""""""
 
     """"""""""""""""""""""""""""""
-    " diff 
+    " diff
     """"""""""""""""""""""""""""""
     au FileType diff colorscheme railscasts
 
     """"""""""""""""""""""""""""""
-    " yaml,xml,html 使用2个空格作为缩进 
+    " yaml,xml,html 使用2个空格作为缩进
     """"""""""""""""""""""""""""""
     autocmd FileType html,xhtml,htmldjango,css,scss,less,xml,jsp setlocal ts=2 sts=2 sw=2 expandtab
 
@@ -361,17 +365,17 @@ endif
     au FileType php set tags+=~/workspace/www/d/tags
 
     """"""""""""""""""""""""""""""
-    " NERDTree 
+    " NERDTree
     """"""""""""""""""""""""""""""
     map <F3> <ESC>:NERDTreeToggle<CR>
-    let NERDTreeIgnore = ['\~$', 
-                \ '\.pyc$', '\.exe$', '\.dll$', 
+    let NERDTreeIgnore = ['\~$',
+                \ '\.pyc$', '\.exe$', '\.dll$',
                 \ '\.jpg$', '\.png$', '\.gif$',
                 \ '\.swf$', '\.fla$', '\.o$',
                 \ '\.tar.gz']
 
     """"""""""""""""""""""""""""""
-    " NERDCommenter 
+    " NERDCommenter
     """"""""""""""""""""""""""""""
     nmap ,cc <leader>cc
     vmap ,cc <leader>cc
@@ -381,13 +385,13 @@ endif
     """"""""""""""""""""""""""""""
     " xmledit
     """"""""""""""""""""""""""""""
-    " jump to the beginning or end of the tag block 
+    " jump to the beginning or end of the tag block
     au FileType xml,html,xhtml nmap <C-M> <LocalLeader>%
 
     """"""""""""""""""""""""""""""
     " miniBufExpl
     """"""""""""""""""""""""""""""
-    let g:miniBufExplMapCTabSwitchBufs = 1 
+    let g:miniBufExplMapCTabSwitchBufs = 1
 
     """"""""""""""""""""""""""""""
     " => bufExplorer plugin
@@ -403,7 +407,7 @@ endif
 
     let g:bufExplorerSortBy = "name"
 
-        
+
     """"""""""""""""""""""""""""""
     " => Zen Coding
     """"""""""""""""""""""""""""""
@@ -422,10 +426,10 @@ endif
     """"""""""""""""""""""""""""""
     " => NeoComplCache
     """"""""""""""""""""""""""""""
-    " Use neocomplcache. 
+    " Use neocomplcache.
     let g:neocomplcache_enable_at_startup = 0
     au FileType markdown,text,gitcommit,php,css,html NeoComplCacheEnable
-    " Use smartcase. 
+    " Use smartcase.
     let g:NeoComplCache_SmartCase = 1
     let g:neocomplcache_caching_limit_file_size = 50000000
     if !exists('g:neocomplcache_force_omni_patterns')
@@ -460,7 +464,7 @@ endif
     """"""""""""""""""""""""""""""
     nmap ,w <leader><leader>w
     nmap ,f <leader><leader>f
-    
+
     """"""""""""""""""""""""""""""
     " => UltiSnips
     """"""""""""""""""""""""""""""
@@ -483,7 +487,7 @@ endif
     """"""""""""""""""""""""""""""
     let g:syntastic_javascript_checker = "jshint"
     let g:syntastic_python_checker = 'flake8'
-    
+
 
     let g:syntastic_mode_map = {
         \ 'mode': 'active',
@@ -540,7 +544,7 @@ endif
       \ 'php' : 1,
       \}
 
-    
+
     """"""""""""""""""""""""""""""
     " => airline
     """"""""""""""""""""""""""""""
