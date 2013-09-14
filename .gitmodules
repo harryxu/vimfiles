@@ -4,9 +4,6 @@
 [submodule "addons/nerdcommenter"]
 	path = addons/nerdcommenter
 	url = http://github.com/scrooloose/nerdcommenter.git
-[submodule "addons/neocomplcache"]
-	path = addons/neocomplcache
-	url = http://github.com/Shougo/neocomplcache.git
 [submodule "addons/surround"]
 	path = addons/surround
 	url = http://github.com/tpope/vim-surround.git
@@ -124,9 +121,6 @@
 [submodule "addons/jedi"]
 	path = addons/jedi
 	url = https://github.com/davidhalter/jedi-vim.git
-[submodule "addons/YouCompleteMe"]
-	path = addons/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe.git
 [submodule "addons/emmet-vim"]
 	path = addons/emmet-vim
 	url = https://github.com/mattn/emmet-vim.git
@@ -136,3 +130,9 @@
 [submodule "addons/tcomment"]
 	path = addons/tcomment
 	url = https://github.com/tomtom/tcomment_vim.git
+[submodule "addons/gitgutter"]
+	path = addons/gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "addons/neocomplete"]
+	path = addons/neocomplete
+	url = https://github.com/Shougo/neocomplete.vim.git

@@ -44,7 +44,8 @@ set cursorline
 
 if !has('Win32')
     set list
-    set listchars=tab:·\ ,trail:·,eol:¬
+    "set listchars=tab:·\ ,trail:·,eol:¬
+    set listchars=tab:·\ ,trail:·
 endif
 
 set shiftround
@@ -189,6 +190,8 @@ let g:solarized_contrast="high"    "default value is normal
 syntax enable
 set background=dark
 colorscheme solarized
+highlight clear SignColumn
+autocmd ColorScheme * highlight clear SignColumn
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -267,7 +270,7 @@ set noswapfile
 " Automatically removing all trailing whitespace
 " http://vim.wikia.com/wiki/Remove_unwanted_spaces#Automatically_removing_all_trailing_whitespace
 nmap ,cw :%s/\s\+$//e<CR><C-O>
-"autocmd FileType c,cpp,java,php autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType c,cpp,java,php,css,javascript,python autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Python virtualenv
@@ -428,7 +431,7 @@ endif
     """"""""""""""""""""""""""""""
     " Use neocomplcache.
     let g:neocomplcache_enable_at_startup = 0
-    au FileType markdown,text,gitcommit,php,css,html NeoComplCacheEnable
+    "au FileType markdown,text,gitcommit,php,css,html NeoComplCacheEnable
     " Use smartcase.
     let g:NeoComplCache_SmartCase = 1
     let g:neocomplcache_caching_limit_file_size = 50000000
@@ -441,6 +444,13 @@ endif
     "let g:neocomplcache_force_omni_patterns.php = '[^. *\t]\.\w*\|\h\w*::'
 
     "let g:neocomplcache_disable_auto_complete = 1
+
+    "Use neocomplete.
+    let g:neocomplete#enable_at_startup = 1
+    " Use smartcase.
+    let g:neocomplete#enable_smart_case = 1
+
+
 
     """"""""""""""""""""""""""""""
     " => Session manager
