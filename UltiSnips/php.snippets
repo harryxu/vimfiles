@@ -60,3 +60,10 @@ foreach ($${1:sets} as $${2:item}) {
     ${3://code}
 }
 endsnippet
+
+snippet cl "Class declaration" !b
+class ${1:`!p snip.rv=snip.fn.split('.')[0]`}${2}
+{
+	$3
+}
+endsnippet
