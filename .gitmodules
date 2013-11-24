@@ -118,9 +118,6 @@
 [submodule "addons/vim-airline"]
 	path = addons/vim-airline
 	url = https://github.com/bling/vim-airline.git
-[submodule "addons/tcomment"]
-	path = addons/tcomment
-	url = https://github.com/tomtom/tcomment_vim.git
 [submodule "addons/gitgutter"]
 	path = addons/gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
