@@ -112,9 +112,9 @@ function! StatuslineCurrentHighlight()
     endif
 endfunction
 
-"set nofoldenable
+set nofoldenable
 "选择代码折叠类型
-set foldmethod=syntax
+"set foldmethod=syntax
 "启动vim时不要自动折叠代码
 set foldlevel=100
 
@@ -495,8 +495,8 @@ endif
     """"""""""""""""""""""""""""""
     " => Syntastic
     """"""""""""""""""""""""""""""
-    let g:syntastic_javascript_checker = "jshint"
-    let g:syntastic_python_checker = 'flake8'
+    let g:syntastic_javascript_checkers = ['jshint']
+    let g:syntastic_python_checkers = ['flake8']
 
 
     let g:syntastic_mode_map = {
@@ -510,6 +510,7 @@ endif
     """"""""""""""""""""""""""""""
     let g:indentLine_enabled = 0
     let g:indentLine_indentLevel = 5
+    let g:indentLine_fileType = ['python']
 
     """"""""""""""""""""""""""""""
     " => AutoTag
