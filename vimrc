@@ -131,10 +131,6 @@ function! ToggleGO(flag)
     endif
 endfunction
 
-" toggle menubar
-nmap ,m :call ToggleGO('m')<CR>
-
-
 set wildignore+=*.o,.git,.svn,*.jpg,*.gif,*.png,*.swf,*.psd,*.rar,*.zip,*.doc
 
 
@@ -371,6 +367,9 @@ endif
     " NERDTree
     """"""""""""""""""""""""""""""
     map <F3> <ESC>:NERDTreeToggle<CR>
+
+    nmap ,g :NERDTreeFind<CR>
+
     let NERDTreeIgnore = ['\~$',
                 \ '\.pyc$', '\.exe$', '\.dll$',
                 \ '\.jpg$', '\.png$', '\.gif$',
