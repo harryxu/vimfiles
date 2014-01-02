@@ -52,9 +52,6 @@
 [submodule "addons/gist-vim"]
 	path = addons/gist-vim
 	url = https://github.com/mattn/gist-vim.git
-[submodule "addons/vim-gummybears-colorscheme"]
-	path = addons/vim-gummybears-colorscheme
-	url = https://github.com/jelera/vim-gummybears-colorscheme.git
 [submodule "addons/Vim-Tomorrow-Theme"]
 	path = addons/Vim-Tomorrow-Theme
 	url = https://github.com/chriskempson/vim-tomorrow-theme.git
