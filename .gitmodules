@@ -124,3 +124,9 @@
 [submodule "addons/neocomplete"]
 	path = addons/neocomplete
 	url = https://github.com/Shougo/neocomplete.vim.git
+[submodule "addons/delimitMate"]
+	path = addons/delimitMate
+	url = https://github.com/Raimondi/delimitMate.git
+[submodule "addons/puppet"]
+	path = addons/puppet
+	url = https://github.com/rodjek/vim-puppet.git
