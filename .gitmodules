@@ -127,3 +127,18 @@
 [submodule "addons/puppet"]
 	path = addons/puppet
 	url = https://github.com/rodjek/vim-puppet.git
+[submodule "addons/base16-vim"]
+	path = addons/base16-vim
+	url = https://github.com/chriskempson/base16-vim.git
+[submodule "addons/wildfire"]
+	path = addons/wildfire
+	url = https://github.com/gcmt/wildfire.vim.git
+[submodule "addons/vim-misc"]
+	path = addons/vim-misc
+	url = https://github.com/xolox/vim-misc.git
+[submodule "addons/vim-easy-align"]
+	path = addons/vim-easy-align
+	url = https://github.com/junegunn/vim-easy-align.git
+[submodule "addons/vim-snippets"]
+	path = addons/vim-snippets
+	url = https://github.com/honza/vim-snippets.git
