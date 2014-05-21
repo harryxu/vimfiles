@@ -3,7 +3,7 @@
 set nocompatible
 
 " pathogen
-call pathogen#runtime_append_all_bundles("addons")
+call pathogen#infect('addons/{}')
 "call pathogen#helptags()
 
 filetype off
