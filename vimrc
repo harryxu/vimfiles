@@ -1,13 +1,108 @@
-"Use Vim settings, rather then Vi settings (much better!).
-"This must be first, because it changes other options as a side effect.
-set nocompatible
+if has('vim_starting')
+    "Use Vim settings, rather then Vi settings (much better!).
+    "This must be first, because it changes other options as a side effect.
+    set nocompatible
 
-" pathogen
-call pathogen#infect('addons/{}')
-"call pathogen#helptags()
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
 
-filetype off
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" My Bundles here:
+" Refer to |:NeoBundle-examples|.
+" Note: You don't set neobundle setting in .gvimrc!
+
+  " vimproc
+  NeoBundle 'Shougo/vimproc.vim', {
+        \ 'build' : {
+        \     'windows' : 'tools\\update-dll-mingw',
+        \     'cygwin' : 'make -f make_cygwin.mak',
+        \     'mac' : 'make -f make_mac.mak',
+        \     'unix' : 'make -f make_unix.mak',
+        \    },
+        \ }
+
+  NeoBundle 'Shougo/unite.vim'
+  NeoBundle 'Shougo/neocomplete.vim'
+
+  NeoBundle 'ujihisa/neco-look'
+
+  NeoBundle 'scrooloose/nerdcommenter'
+  NeoBundle 'scrooloose/nerdtree'
+  NeoBundle 'scrooloose/syntastic'
+
+  " UltiSnips
+  NeoBundle 'SirVer/ultisnips'
+  NeoBundle 'honza/vim-snippets'
+
+  " 
+  NeoBundle 'Lokaltog/vim-easymotion'
+
+  " airline
+  NeoBundle 'bling/vim-airline'
+
+  " session
+  NeoBundle 'xolox/vim-session'
+  NeoBundle 'xolox/vim-misc'
+
+  NeoBundle 'kien/ctrlp.vim'
+  NeoBundle 'Rykka/colorv.vim'
+  NeoBundle 'gregsexton/MatchTag'
+  NeoBundle 'chrisbra/NrrwRgn'
+  NeoBundle 'mileszs/ack.vim'
+  NeoBundle 'mattn/emmet-vim'
+  NeoBundle 'airblade/vim-gitgutter'
+  NeoBundle 'plasticboy/vim-markdown'
+  NeoBundle 'Raimondi/delimitMate'
+  NeoBundle 'majutsushi/tagbar'
+  NeoBundle 'vim-php/tagbar-phpctags.vim'
+  NeoBundle 'terryma/vim-multiple-cursors'
+  NeoBundle 'sukima/xmledit'
+  NeoBundle 'tpope/vim-fugitive', {'augroup' : 'fugitive'}
+  NeoBundle 'tpope/vim-surround'
+
+  " JavaScript
+  NeoBundleLazy 'pangloss/vim-javascript', {'name': 'javascript'}
+  autocmd FileType html,php,javascript NeoBundleSource javascript
+
+  " html5
+  NeoBundleLazy 'othree/html5.vim', {'name': 'html5'}
+  autocmd FileType html,php NeoBundleSource html5
+
+  " css3 syntax
+  NeoBundleLazy 'hail2u/vim-css3-syntax', {'name': 'css3'}
+  autocmd FileType css,html,php NeoBundleSource css3
+
+  " dockerfile syntax
+  NeoBundle 'honza/dockerfile.vim'
+
+  " puppet syntax
+  NeoBundle 'rodjek/vim-puppet'
+
+  " Base16 Vim Colorschemes
+  NeoBundle 'chriskempson/base16-vim'
+
+  " github colorscheme
+  NeoBundle 'harryxu/vim-github-colorscheme'
+
+  " Solarized Colorscheme
+  NeoBundle 'altercation/vim-colors-solarized'
+
+
+call neobundle#end()
+
+"filetype off
 filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
+
 
 set modelines=1
 
@@ -162,20 +257,10 @@ if has('Win32')
     set guifont=Inconsolata:h12
     set linespace=1
 elseif has('mac')
-    set guifont=Menlo:h15
+    set guifont=Menlo:h17
 else
-    "set guifont=Consolas\ Bold\ 13
-    "set guifont=Consolas\ 13
-    "set guifont=Monaco\ Bold\ 11
-    "set guifont=Monaco\ 10
-    "set guifont=Bitstream\ Vera\ Sans\ Mono\ Bold\ 12
-    "set guifont=Bitstream\ Vera\ Sans\ Mono\ 11
     set guifont=Inconsolata\ 14
-    "set guifont=Inconsolata\ for\ Powerline\ 13
-    "set guifont=Anonymous\ Pro\ Bold\ 12
-    "set guifont=DejaVu\ Sans\ Mono\ 11
     set gfw=WenQuanYi\Micro\Hei\ 12
-    "set gfw=WenQuanYi\Zen\Hei\ 11
     set linespace=2
 endif
 
