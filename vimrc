@@ -40,7 +40,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   NeoBundle 'SirVer/ultisnips'
   NeoBundle 'honza/vim-snippets'
 
-  " 
+  " EasyMotion
   NeoBundle 'Lokaltog/vim-easymotion'
 
   " airline
@@ -63,8 +63,18 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   NeoBundle 'vim-php/tagbar-phpctags.vim'
   NeoBundle 'terryma/vim-multiple-cursors'
   NeoBundle 'sukima/xmledit'
+
+  " fugitive.vim: a Git wrapper so awesome
   NeoBundle 'tpope/vim-fugitive', {'augroup' : 'fugitive'}
+
+  " surround.vim: quoting/parenthesizing made simple
   NeoBundle 'tpope/vim-surround'
+
+  " wildfire: Smart selection of the closest text object.
+  NeoBundle 'gcmt/wildfire.vim'
+
+  " Up-to-date PHP syntax file (5.3, 5.4 & 5.5 support; basic 5.6 support)
+  NeoBundle 'StanAngeloff/php.vim'
 
   " JavaScript
   NeoBundleLazy 'pangloss/vim-javascript', {'name': 'javascript'}
