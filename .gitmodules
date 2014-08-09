@@ -142,3 +142,15 @@
 [submodule "addons/vim-snippets"]
 	path = addons/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
+[submodule "addons/vim-colors-pencil"]
+	path = addons/vim-colors-pencil
+	url = https://github.com/reedes/vim-colors-pencil.git
+[submodule "addons/github-colorscheme"]
+	path = addons/github-colorscheme
+	url = https://github.com/endel/vim-github-colorscheme.git
+[submodule "addons/seoul256"]
+	path = addons/seoul256
+	url = https://github.com/junegunn/seoul256.vim.git
+[submodule "addons/dockerfile"]
+	path = addons/dockerfile
+	url = https://github.com/honza/dockerfile.vim.git
