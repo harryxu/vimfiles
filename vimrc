@@ -184,43 +184,9 @@ set sessionoptions-=options
 " wrapping text
 set wrap linebreak
 
-"statusline setup
-set statusline=%f "tail of the filename
-
-"display a warning if fileformat isnt unix
-set statusline+=\ [%{&ff}]
-
-"display file encoding
-set statusline+=[%{&fenc}]
-
-set statusline+=%h "help file flag
-set statusline+=%y "filetype
-set statusline+=%r "read only flag
-set statusline+=%m "modified flag
-
-"display a warning if &paste is set
-set statusline+=%#error#
-set statusline+=%{&paste?'[paste]':''}
-set statusline+=%*
-
-
-set statusline+=%= "left/right separator
-set statusline+=%{StatuslineCurrentHighlight()}\ \ "current highlight
-set statusline+=%c, "cursor column
-set statusline+=\ %l/%L "cursor line/total lines
-set statusline+=\ %P "percent through file
 set laststatus=2
 
-"return the syntax highlight group under the cursor ''
-function! StatuslineCurrentHighlight()
-    let name = synIDattr(synID(line('.'),col('.'),1),'name')
-    if name == ''
-        return ''
-    else
-        return '[' . name . ']'
-    endif
-endfunction
-
+" 默认禁用代码折叠
 set nofoldenable
 "选择代码折叠类型
 "set foldmethod=syntax
