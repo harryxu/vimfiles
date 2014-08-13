@@ -50,7 +50,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   NeoBundle 'xolox/vim-session'
   NeoBundle 'xolox/vim-misc'
 
-  NeoBundle 'kien/ctrlp.vim'
+  " Fuzzy file, buffer, mru, tag, etc finder.
+  NeoBundle 'ctrlpvim/ctrlp.vim'
+
   NeoBundle 'Rykka/colorv.vim'
   NeoBundle 'gregsexton/MatchTag'
   NeoBundle 'chrisbra/NrrwRgn'
