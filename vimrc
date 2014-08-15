@@ -53,6 +53,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   " Fuzzy file, buffer, mru, tag, etc finder.
   NeoBundle 'ctrlpvim/ctrlp.vim'
 
+  " a ctrlp.vim extension - Navigate and jump to function defs
+  NeoBundle 'tacahiroy/ctrlp-funky'
+
   NeoBundle 'Rykka/colorv.vim'
   NeoBundle 'gregsexton/MatchTag'
   NeoBundle 'chrisbra/NrrwRgn'
@@ -640,3 +643,8 @@ endif
 
     " enable/disable tagbar integration
     let g:airline_enable_tagbar = 1
+
+    """"""""""""""""""""""""""""""
+    " => ctrlp and extensions
+    """"""""""""""""""""""""""""""
+    let g:ctrlp_extensions = ['funky']
