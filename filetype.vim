@@ -31,3 +31,5 @@ au BufRead,BufNewFile *.hw,*.module,*.pkg,*.install,*.test
 au BufRead,BufNewFile *.info set filetype=dosini
 
 au BufRead,BufNewFile *.twig set filetype=htmldjango
+
+au BufRead,BufNewFile Vagrantfile set filetype=ruby
