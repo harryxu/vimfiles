@@ -82,16 +82,13 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   NeoBundle 'StanAngeloff/php.vim'
 
   " JavaScript
-  NeoBundleLazy 'pangloss/vim-javascript', {'name': 'javascript'}
-  autocmd FileType html,php,javascript NeoBundleSource javascript
+  NeoBundle 'pangloss/vim-javascript'
 
   " html5
-  NeoBundleLazy 'othree/html5.vim', {'name': 'html5'}
-  autocmd FileType html,php NeoBundleSource html5
+  NeoBundle 'othree/html5.vim'
 
   " css3 syntax
-  NeoBundleLazy 'hail2u/vim-css3-syntax', {'name': 'css3'}
-  autocmd FileType css,html,php NeoBundleSource css3
+  NeoBundle 'hail2u/vim-css3-syntax'
 
   " dockerfile syntax
   NeoBundle 'honza/dockerfile.vim'
@@ -238,7 +235,9 @@ if has('Win32')
     set guifont=Inconsolata:h12
     set linespace=1
 elseif has('mac')
-    set guifont=Menlo:h17
+    "set guifont=Menlo:h17
+    "set guifont=Inconsolata:h26
+    set guifont=PT\ Mono:h21
 else
     set guifont=Inconsolata\ 14
     set gfw=WenQuanYi\Micro\Hei\ 12
@@ -248,17 +247,12 @@ endif
 " 打开代码高亮
 syntax enable
 
-" ------------------------------------------------------------------
-" Solarized Colorscheme Config
-" ------------------------------------------------------------------
-let g:solarized_bold=0    "default value is 1
-let g:solarized_contrast="high"    "default value is normal
-syntax enable
-set background=dark
-colorscheme solarized
-highlight clear SignColumn
-autocmd ColorScheme * highlight clear SignColumn
-
+" Default Colorscheme
+if (has('gui_running'))
+    colorscheme base16-google
+else
+    colorscheme solarized
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Editing mappings etc.
@@ -542,7 +536,7 @@ endif
     " => vim-easymotion
     """"""""""""""""""""""""""""""
     nmap ,w <leader><leader>w
-    nmap ,f <leader><leader>f
+    "nmap ,f <leader><leader>f
 
     """"""""""""""""""""""""""""""
     " => UltiSnips
@@ -648,3 +642,4 @@ endif
     " => ctrlp and extensions
     """"""""""""""""""""""""""""""
     let g:ctrlp_extensions = ['funky']
+    nmap ,f :CtrlPFunky<CR>
