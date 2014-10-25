@@ -56,6 +56,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   " a ctrlp.vim extension - Navigate and jump to function defs
   NeoBundle 'tacahiroy/ctrlp-funky'
 
+  NeoBundle 'haya14busa/incsearch.vim'
+
   NeoBundle 'Rykka/colorv.vim'
   NeoBundle 'gregsexton/MatchTag'
   NeoBundle 'chrisbra/NrrwRgn'
@@ -237,7 +239,7 @@ if has('Win32')
 elseif has('mac')
     "set guifont=Menlo:h17
     "set guifont=Inconsolata:h26
-    set guifont=PT\ Mono:h21
+    set guifont=PT\ Mono:h20
 else
     set guifont=Inconsolata\ 14
     set gfw=WenQuanYi\Micro\Hei\ 12
@@ -643,3 +645,18 @@ endif
     """"""""""""""""""""""""""""""
     let g:ctrlp_extensions = ['funky']
     nmap ,f :CtrlPFunky<CR>
+
+    """"""""""""""""""""""""""""""
+    " => incsearch
+    """"""""""""""""""""""""""""""
+    map /  <Plug>(incsearch-forward)
+    map ?  <Plug>(incsearch-backward)
+    map g/ <Plug>(incsearch-stay)
+
+    let g:incsearch#auto_nohlsearch = 1
+    map n  <Plug>(incsearch-nohl-n)
+    map N  <Plug>(incsearch-nohl-N)
+    map *  <Plug>(incsearch-nohl-*)
+    map #  <Plug>(incsearch-nohl-#)
+    map g* <Plug>(incsearch-nohl-g*)
+    map g# <Plug>(incsearch-nohl-g#)
