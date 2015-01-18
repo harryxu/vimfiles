@@ -32,9 +32,13 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
   NeoBundle 'ujihisa/neco-look'
 
-  NeoBundle 'scrooloose/nerdcommenter'
+  " comment stuff out
+  NeoBundle 'tpope/vim-commentary'
+
   NeoBundle 'scrooloose/nerdtree'
   NeoBundle 'scrooloose/syntastic'
+
+  NeoBundle 'editorconfig/editorconfig-vim'
 
   " UltiSnips
   NeoBundle 'SirVer/ultisnips'
@@ -56,7 +60,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   " a ctrlp.vim extension - Navigate and jump to function defs
   NeoBundle 'tacahiroy/ctrlp-funky'
 
-  NeoBundle 'haya14busa/incsearch.vim'
+  " A better JSON for Vim
+  NeoBundle 'elzr/vim-json'
 
   NeoBundle 'Rykka/colorv.vim'
   NeoBundle 'gregsexton/MatchTag'
@@ -65,11 +70,19 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   NeoBundle 'mattn/emmet-vim'
   NeoBundle 'airblade/vim-gitgutter'
   NeoBundle 'plasticboy/vim-markdown'
-  NeoBundle 'Raimondi/delimitMate'
   NeoBundle 'majutsushi/tagbar'
   NeoBundle 'vim-php/tagbar-phpctags.vim'
   NeoBundle 'terryma/vim-multiple-cursors'
   NeoBundle 'sukima/xmledit'
+
+  " Vim plugin for Livedown.
+  NeoBundle 'shime/vim-livedown'
+
+  " Provides insert mode auto-completion for quotes, parens, brackets, etc.
+  "NeoBundle 'Raimondi/delimitMate'
+
+  " Auto close parentheses and repeat by dot dot dot...
+  NeoBundle 'cohama/lexima.vim'
 
   " fugitive.vim: a Git wrapper so awesome
   NeoBundle 'tpope/vim-fugitive', {'augroup' : 'fugitive'}
@@ -85,6 +98,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
   " JavaScript
   NeoBundle 'pangloss/vim-javascript'
+
+  " React JSX syntax highlighting and indenting for vim.
+  NeoBundle 'mxw/vim-jsx'
 
   " html5
   NeoBundle 'othree/html5.vim'
@@ -250,11 +266,9 @@ endif
 syntax enable
 
 " Default Colorscheme
-if (has('gui_running'))
-    colorscheme base16-google
-else
-    colorscheme solarized
-endif
+let g:solarized_menu=0
+set background=dark
+colorscheme solarized
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Editing mappings etc.
@@ -398,11 +412,6 @@ endif
     """"""""""""""""""""""""""""""
 
     """"""""""""""""""""""""""""""
-    " diff
-    """"""""""""""""""""""""""""""
-    au FileType diff colorscheme railscasts
-
-    """"""""""""""""""""""""""""""
     " yaml,xml,html 使用2个空格作为缩进
     """"""""""""""""""""""""""""""
     autocmd FileType html,xhtml,htmldjango,css,scss,less,xml,jsp setlocal ts=2 sts=2 sw=2 expandtab
@@ -425,10 +434,6 @@ endif
     imap <F4> <ESC>:TagbarToggle<CR>
     let g:tagbar_phpctags_bin='/Users/harry/workspace/utils/phpctags/phpctags'
 
-    " ctags
-    set tags=./tags;/
-    au FileType php set tags+=~/workspace/www/d/tags
-
     """"""""""""""""""""""""""""""
     " NERDTree
     """"""""""""""""""""""""""""""
@@ -441,14 +446,6 @@ endif
                 \ '\.jpg$', '\.png$', '\.gif$',
                 \ '\.swf$', '\.fla$', '\.o$',
                 \ '\.tar.gz']
-
-    """"""""""""""""""""""""""""""
-    " NERDCommenter
-    """"""""""""""""""""""""""""""
-    nmap ,cc <leader>cc
-    vmap ,cc <leader>cc
-    nmap ,c<space> <leader>c<space>
-    vmap ,c<space> <leader>c<space>
 
     """"""""""""""""""""""""""""""
     " xmledit
@@ -492,24 +489,8 @@ endif
     "let g:use_zen_complete_tag = 1
 
     """"""""""""""""""""""""""""""
-    " => NeoComplCache
+    " => neocomplete
     """"""""""""""""""""""""""""""
-    " Use neocomplcache.
-    let g:neocomplcache_enable_at_startup = 0
-    "au FileType markdown,text,gitcommit,php,css,html NeoComplCacheEnable
-    " Use smartcase.
-    let g:NeoComplCache_SmartCase = 1
-    let g:neocomplcache_caching_limit_file_size = 50000000
-    if !exists('g:neocomplcache_force_omni_patterns')
-        let g:neocomplcache_force_omni_patterns = {}
-    endif
-    "let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-    let g:neocomplcache_force_omni_patterns.python = '[^. \t]\.\w*'
-
-    "let g:neocomplcache_force_omni_patterns.php = '[^. *\t]\.\w*\|\h\w*::'
-
-    "let g:neocomplcache_disable_auto_complete = 1
-
     "Use neocomplete.
     let g:neocomplete#enable_at_startup = 1
     " Use smartcase.
@@ -521,6 +502,7 @@ endif
     " => Session manager
     """"""""""""""""""""""""""""""
     let g:session_autosave = 'yes'
+    let g:session_menu = 0
 
     """"""""""""""""""""""""""""""
     " => ack.vim
@@ -551,11 +533,6 @@ endif
     " => vim autoclose
     """"""""""""""""""""""""""""""
     let g:AutoClosePreserveDotReg = 0
-
-    """"""""""""""""""""""""""""""
-    " => vim statline
-    """"""""""""""""""""""""""""""
-    let g:statline_fugitive = 1
 
     """"""""""""""""""""""""""""""
     " => Syntastic
@@ -594,34 +571,6 @@ endif
     "autocmd  FileType python let b:did_ftplugin = 1
 
     """"""""""""""""""""""""""""""
-    " => YouCompleteMe
-    """"""""""""""""""""""""""""""
-    let g:ycm_key_list_select_completion = ['<Down>']
-    let g:ycm_key_list_previous_completion = ['<Up>']
-    let g:ycm_semantic_triggers =  {
-        \   'c' : ['->', '.'],
-        \   'objc' : ['->', '.'],
-        \   'ocaml' : ['.', '#'],
-        \   'cpp,objcpp' : ['->', '.', '::'],
-        \   'perl' : ['->'],
-        \   'php' : [],
-        \   'cs,java,javascript,d,vim,python,perl6,scala,vb,elixir,go' : ['.'],
-        \   'ruby' : ['.', '::'],
-        \   'lua' : ['.', ':'],
-        \   'erlang' : [':'],
-        \ }
-    "let g:ycm_filetype_whitelist = { 'python': 1 }
-    let g:ycm_filetype_blacklist = {
-      \ 'markdown' : 1,
-      \ 'text' : 1,
-      \ 'gitcommit' : 1,
-      \ 'css' : 1,
-      \ 'html' : 1,
-      \ 'php' : 1,
-      \}
-
-
-    """"""""""""""""""""""""""""""
     " => airline
     """"""""""""""""""""""""""""""
     let g:airline_left_sep = ''
@@ -647,16 +596,6 @@ endif
     nmap ,f :CtrlPFunky<CR>
 
     """"""""""""""""""""""""""""""
-    " => incsearch
+    " => react jsx
     """"""""""""""""""""""""""""""
-    map /  <Plug>(incsearch-forward)
-    map ?  <Plug>(incsearch-backward)
-    map g/ <Plug>(incsearch-stay)
-
-    let g:incsearch#auto_nohlsearch = 1
-    map n  <Plug>(incsearch-nohl-n)
-    map N  <Plug>(incsearch-nohl-N)
-    map *  <Plug>(incsearch-nohl-*)
-    map #  <Plug>(incsearch-nohl-#)
-    map g* <Plug>(incsearch-nohl-g*)
-    map g# <Plug>(incsearch-nohl-g#)
+    let g:jsx_ext_required = 0

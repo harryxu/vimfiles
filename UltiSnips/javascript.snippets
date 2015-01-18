@@ -6,3 +6,20 @@ else {
     ${3://code}
 }
 endsnippet
+
+snippet kfun "function keyed" b
+${1:name}: function($2) {
+	$3
+}
+endsnippet
+
+snippet rcc "React create class" b
+var ${1:ClassName} = React.createClass({
+	render: function() {
+		$2
+		return (
+			$3
+		);
+	}
+});
+endsnippet
