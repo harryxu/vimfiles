@@ -35,6 +35,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   " comment stuff out
   NeoBundle 'tpope/vim-commentary'
 
+  " Tern plugin for Vim
+  NeoBundle 'marijnh/tern_for_vim'
+
   NeoBundle 'scrooloose/nerdtree'
   NeoBundle 'scrooloose/syntastic'
 
@@ -63,6 +66,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   " A better JSON for Vim
   NeoBundle 'elzr/vim-json'
 
+  " A fancy start screen for Vim.
+  NeoBundle 'mhinz/vim-startify'
+
   NeoBundle 'Rykka/colorv.vim'
   NeoBundle 'gregsexton/MatchTag'
   NeoBundle 'chrisbra/NrrwRgn'
@@ -74,6 +80,12 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   NeoBundle 'vim-php/tagbar-phpctags.vim'
   NeoBundle 'terryma/vim-multiple-cursors'
   NeoBundle 'sukima/xmledit'
+
+  " A Vim plugin for writing JSON with JSON Schema
+  NeoBundle 'Quramy/vison'
+
+  " vim plugin for tmux.conf
+  NeoBundle 'tmux-plugins/vim-tmux'
 
   " Vim plugin for Livedown.
   NeoBundle 'shime/vim-livedown'
@@ -268,7 +280,7 @@ syntax enable
 " Default Colorscheme
 let g:solarized_menu=0
 set background=dark
-colorscheme solarized
+colorscheme desert
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Editing mappings etc.
@@ -573,21 +585,6 @@ endif
     """"""""""""""""""""""""""""""
     " => airline
     """"""""""""""""""""""""""""""
-    let g:airline_left_sep = ''
-    let g:airline_right_sep = ''
-    let g:airline_linecolumn_prefix = '¶ '
-    let g:airline_branch_prefix = '⎇ '
-    let g:airline_paste_symbol = 'ρ'
-    let g:airline_whitespace_symbol = 'Ξ'
-
-    " enable/disable fugitive/lawrencium integration
-    let g:airline_enable_branch = 1
-
-    " enable/disable syntastic integration
-    let g:airline_enable_syntastic = 1
-
-    " enable/disable tagbar integration
-    let g:airline_enable_tagbar = 1
 
     """"""""""""""""""""""""""""""
     " => ctrlp and extensions
