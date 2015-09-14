@@ -257,19 +257,13 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 if has('Win32')
-    " 代码字体和大小
-    "set guifont=YaHei_Consolas_Hybrid:h10.5
-    "set guifont=Bitstream_Vera_Sans_Mono:h11
     set guifont=Inconsolata:h12
     set linespace=1
 elseif has('mac')
-    "set guifont=Menlo:h17
-    "set guifont=Inconsolata:h26
     set guifont=PT\ Mono:h20
 else
-    set guifont=Inconsolata\ 14
+    set guifont=Courier\ Prime\ Code\ 17
     set gfw=WenQuanYi\Micro\Hei\ 12
     set linespace=2
 endif
