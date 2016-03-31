@@ -129,6 +129,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   " github colorscheme
   NeoBundle 'harryxu/vim-github-colorscheme'
 
+  NeoBundle 'mkarmona/colorsbox'
+
   " Solarized Colorscheme
   NeoBundle 'altercation/vim-colors-solarized'
 
@@ -258,7 +260,7 @@ if has('Win32')
     set guifont=Inconsolata:h12
     set linespace=1
 elseif has('mac')
-    set guifont=PT\ Mono:h20
+    set guifont=Fira\ Code:h20
 else
     set guifont=Courier\ Prime\ Code\ 17
     set gfw=WenQuanYi\Micro\Hei\ 12
@@ -271,7 +273,7 @@ syntax enable
 " Default Colorscheme
 let g:solarized_menu=0
 set background=dark
-colorscheme desert
+colorscheme colorsbox-steighties
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Editing mappings etc.
