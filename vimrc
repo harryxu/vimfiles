@@ -66,9 +66,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   " A better JSON for Vim
   NeoBundle 'elzr/vim-json'
 
-  " A fancy start screen for Vim.
-  NeoBundle 'mhinz/vim-startify'
-
   NeoBundle 'Rykka/colorv.vim'
   NeoBundle 'gregsexton/MatchTag'
   NeoBundle 'chrisbra/NrrwRgn'
