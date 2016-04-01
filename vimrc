@@ -28,7 +28,14 @@ NeoBundleFetch 'Shougo/neobundle.vim'
         \ }
 
   NeoBundle 'Shougo/unite.vim'
-  NeoBundle 'Shougo/neocomplete.vim'
+
+  NeoBundle 'Shougo/deoplete.nvim', {
+            \ 'disabled': !has('nvim')
+        \ }
+
+  NeoBundle 'Shougo/neocomplete.vim', {
+            \ 'disabled': has('nvim'),
+        \ }
 
   NeoBundle 'ujihisa/neco-look'
 
@@ -493,15 +500,17 @@ endif
     endfun
     "let g:use_zen_complete_tag = 1
 
-    """"""""""""""""""""""""""""""
-    " => neocomplete
-    """"""""""""""""""""""""""""""
-    "Use neocomplete.
-    let g:neocomplete#enable_at_startup = 1
-    " Use smartcase.
-    let g:neocomplete#enable_smart_case = 1
+    if !has('nvim')
+        "Use neocomplete.
+        let g:neocomplete#enable_at_startup = 1
+        " Use smartcase.
+        let g:neocomplete#enable_smart_case = 1
+    endif
 
-
+    if has('nvim')
+        " Use deoplete.
+        let g:deoplete#enable_at_startup = 1
+    endif
 
     """"""""""""""""""""""""""""""
     " => Session manager
