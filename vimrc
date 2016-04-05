@@ -39,6 +39,12 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
   NeoBundle 'ujihisa/neco-look'
 
+  NeoBundle 'junegunn/fzf', {
+  \ 'build': {
+  \   'others': 'install'
+  \   }
+  \ }
+
   " comment stuff out
   NeoBundle 'tpope/vim-commentary'
 
@@ -63,12 +69,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   " session
   NeoBundle 'xolox/vim-session'
   NeoBundle 'xolox/vim-misc'
-
-  " Fuzzy file, buffer, mru, tag, etc finder.
-  NeoBundle 'ctrlpvim/ctrlp.vim'
-
-  " a ctrlp.vim extension - Navigate and jump to function defs
-  NeoBundle 'tacahiroy/ctrlp-funky'
 
   " A better JSON for Vim
   NeoBundle 'elzr/vim-json'
@@ -512,6 +512,15 @@ endif
         let g:deoplete#enable_at_startup = 1
     endif
 
+    " fzf search project root
+    fun! s:fzf_root()
+        let path = finddir(".git", expand("%:p:h").";")
+        return fnamemodify(substitute(path, ".git", "", ""), ":p:h")
+    endfun
+
+
+    nnoremap <C-p> :exe 'FZF ' . <SID>fzf_root()<CR>
+
     """"""""""""""""""""""""""""""
     " => Session manager
     """"""""""""""""""""""""""""""
@@ -585,17 +594,5 @@ endif
     let g:jedi#show_function_definition = "0"
     "autocmd  FileType python let b:did_ftplugin = 1
 
-    """"""""""""""""""""""""""""""
-    " => airline
-    """"""""""""""""""""""""""""""
-
-    """"""""""""""""""""""""""""""
-    " => ctrlp and extensions
-    """"""""""""""""""""""""""""""
-    let g:ctrlp_extensions = ['funky']
-    nmap ,f :CtrlPFunky<CR>
-
-    """"""""""""""""""""""""""""""
-    " => react jsx
-    """"""""""""""""""""""""""""""
+    " react jsx
     let g:jsx_ext_required = 0
