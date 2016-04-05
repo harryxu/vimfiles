@@ -39,11 +39,10 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
   NeoBundle 'ujihisa/neco-look'
 
-  NeoBundle 'junegunn/fzf', {
-  \ 'build': {
-  \   'others': 'install'
-  \   }
-  \ }
+  NeoBundle 'junegunn/fzf'
+
+  " Extended f, F, t and T key mappings for Vim.
+  NeoBundle 'rhysd/clever-f.vim'
 
   " comment stuff out
   NeoBundle 'tpope/vim-commentary'
