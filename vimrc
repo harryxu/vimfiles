@@ -90,9 +90,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   " vim plugin for tmux.conf
   NeoBundle 'tmux-plugins/vim-tmux'
 
-  " Vim plugin for Livedown.
-  NeoBundle 'shime/vim-livedown'
-
   " Provides insert mode auto-completion for quotes, parens, brackets, etc.
   "NeoBundle 'Raimondi/delimitMate'
 
@@ -107,6 +104,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
   " wildfire: Smart selection of the closest text object.
   NeoBundle 'gcmt/wildfire.vim'
+
+  " Go development plugin for Vim
+  NeoBundle 'fatih/vim-go'
 
   " Up-to-date PHP syntax file (5.3, 5.4 & 5.5 support; basic 5.6 support)
   NeoBundle 'StanAngeloff/php.vim'
