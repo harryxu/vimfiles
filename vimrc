@@ -78,8 +78,6 @@ if dein#load_state(expand('~/.vim/bundle'))
 
     call dein#add('majutsushi/tagbar')
 
-    call dein#add('vim-php/tagbar-phpctags.vim')
-
     call dein#add('terryma/vim-multiple-cursors')
 
     call dein#add('sukima/xmledit')
@@ -116,6 +114,7 @@ if dein#load_state(expand('~/.vim/bundle'))
     " Go development plugin for Vim
     call dein#add('fatih/vim-go')
 
+    call dein#add('vim-scripts/xterm16.vim')
 
     " Up-to-date PHP syntax file (5.3, 5.4 & 5.5 support; basic 5.6 support)
     call dein#add('StanAngeloff/php.vim')
@@ -296,7 +295,7 @@ syntax enable
 
 " Default Colorscheme
 let g:solarized_menu=0
-set background=dark
+set background=light
 colorscheme colorsbox-steighties
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
