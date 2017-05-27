@@ -69,8 +69,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   NeoBundle 'xolox/vim-session'
   NeoBundle 'xolox/vim-misc'
 
-  " A better JSON for Vim
-  NeoBundle 'elzr/vim-json'
 
   NeoBundle 'Rykka/colorv.vim'
   NeoBundle 'gregsexton/MatchTag'
@@ -132,8 +130,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   " Base16 Vim Colorschemes
   NeoBundle 'chriskempson/base16-vim'
 
-  " github colorscheme
-  NeoBundle 'harryxu/vim-github-colorscheme'
+  NeoBundle 'vim-scripts/xterm16.vim'
 
   NeoBundle 'mkarmona/colorsbox'
 
@@ -278,7 +275,7 @@ syntax enable
 
 " Default Colorscheme
 let g:solarized_menu=0
-set background=dark
+set background=light
 colorscheme colorsbox-steighties
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
