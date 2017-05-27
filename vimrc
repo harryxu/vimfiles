@@ -9,6 +9,8 @@ if dein#load_state(expand('~/.vim/bundle'))
 
     call dein#add('~/.vim/bundle/repos/github.com/Shougo/dein.vim')
 
+    call dein#add('Shougo/deoplete.nvim')
+
     call dein#add('Shougo/neocomplete.vim')
 
 
@@ -114,6 +116,9 @@ if dein#load_state(expand('~/.vim/bundle'))
     " Go development plugin for Vim
     call dein#add('fatih/vim-go')
 
+    " deoplete.nvim source for Go. Asynchronous Go completion for Neovim.
+    call dein#add('zchee/deoplete-go', {'build': 'make'})
+
     call dein#add('vim-scripts/xterm16.vim')
 
     " Up-to-date PHP syntax file (5.3, 5.4 & 5.5 support; basic 5.6 support)
@@ -142,14 +147,6 @@ if dein#load_state(expand('~/.vim/bundle'))
 
     " puppet syntax
     call dein#add('rodjek/vim-puppet')
-
-
-    " Base16 Vim Colorschemes
-    call dein#add('chriskempson/base16-vim')
-
-
-    " github colorscheme
-    call dein#add('harryxu/vim-github-colorscheme')
 
 
     call dein#add('mkarmona/colorsbox')
@@ -295,8 +292,10 @@ syntax enable
 
 " Default Colorscheme
 let g:solarized_menu=0
-set background=light
+set background=dark
+
 colorscheme colorsbox-steighties
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Editing mappings etc.
