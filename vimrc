@@ -1,154 +1,172 @@
-if has('vim_starting')
-    "Use Vim settings, rather then Vi settings (much better!).
-    "This must be first, because it changes other options as a side effect.
+if &compatible
     set nocompatible
+endif
+set runtimepath+=~/.vim/bundle/repos/github.com/Shougo/dein.vim
 
-    set runtimepath+=~/.vim/bundle/neobundle.vim/
+
+if dein#load_state(expand('~/.vim/bundle'))
+    call dein#begin(expand('~/.vim/bundle'))
+
+    call dein#add('~/.vim/bundle/repos/github.com/Shougo/dein.vim')
+
+    call dein#add('Shougo/neocomplete.vim')
+
+
+    call dein#add('ujihisa/neco-look')
+
+
+    call dein#add('junegunn/fzf')
+
+
+    " Extended f, F, t and T key mappings for Vim.
+    call dein#add('rhysd/clever-f.vim')
+
+
+    " comment stuff out
+    call dein#add('tpope/vim-commentary')
+
+
+    " Tern plugin for Vim
+    call dein#add('marijnh/tern_for_vim')
+
+
+    call dein#add('scrooloose/nerdtree')
+
+    call dein#add('scrooloose/syntastic')
+
+
+    call dein#add('editorconfig/editorconfig-vim')
+
+
+    " UltiSnips
+    call dein#add('SirVer/ultisnips')
+
+    call dein#add('honza/vim-snippets')
+
+
+    " EasyMotion
+    call dein#add('Lokaltog/vim-easymotion')
+
+
+    " airline
+    call dein#add('bling/vim-airline')
+
+
+    " session
+    call dein#add('xolox/vim-session')
+
+    call dein#add('xolox/vim-misc')
+
+
+    " A better JSON for Vim
+    call dein#add('elzr/vim-json')
+
+
+    call dein#add('Rykka/colorv.vim')
+
+    call dein#add('gregsexton/MatchTag')
+
+    call dein#add('chrisbra/NrrwRgn')
+
+    call dein#add('mileszs/ack.vim')
+
+    call dein#add('mattn/emmet-vim')
+
+    call dein#add('airblade/vim-gitgutter')
+
+    call dein#add('plasticboy/vim-markdown')
+
+    call dein#add('majutsushi/tagbar')
+
+    call dein#add('vim-php/tagbar-phpctags.vim')
+
+    call dein#add('terryma/vim-multiple-cursors')
+
+    call dein#add('sukima/xmledit')
+
+
+    " A Vim plugin for writing JSON with JSON Schema
+    call dein#add('Quramy/vison')
+
+
+    " vim plugin for tmux.conf
+    call dein#add('tmux-plugins/vim-tmux')
+
+
+    " Provides insert mode auto-completion for quotes, parens, brackets, etc.
+    "call dein#add('Raimondi/delimitMate')
+
+
+    " Auto close parentheses and repeat by dot dot dot...
+    call dein#add('cohama/lexima.vim')
+
+
+    " fugitive.vim: a Git wrapper so awesome
+    call dein#add('tpope/vim-fugitive',)
+
+
+    " surround.vim: quoting/parenthesizing made simple
+    call dein#add('tpope/vim-surround')
+
+
+    " wildfire: Smart selection of the closest text object.
+    call dein#add('gcmt/wildfire.vim')
+
+
+    " Go development plugin for Vim
+    call dein#add('fatih/vim-go')
+
+
+    " Up-to-date PHP syntax file (5.3, 5.4 & 5.5 support; basic 5.6 support)
+    call dein#add('StanAngeloff/php.vim')
+
+
+    " JavaScript
+    call dein#add('pangloss/vim-javascript')
+
+
+    " React JSX syntax highlighting and indenting for vim.
+    call dein#add('mxw/vim-jsx')
+
+
+    " html5
+    call dein#add('othree/html5.vim')
+
+
+    " css3 syntax
+    call dein#add('hail2u/vim-css3-syntax')
+
+
+    " dockerfile syntax
+    call dein#add('honza/dockerfile.vim')
+
+
+    " puppet syntax
+    call dein#add('rodjek/vim-puppet')
+
+
+    " Base16 Vim Colorschemes
+    call dein#add('chriskempson/base16-vim')
+
+
+    " github colorscheme
+    call dein#add('harryxu/vim-github-colorscheme')
+
+
+    call dein#add('mkarmona/colorsbox')
+
+
+    " Solarized Colorscheme
+    call dein#add('altercation/vim-colors-solarized')
+
+
+    call dein#end()
+    call dein#save_state()
 endif
 
-" Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
-
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" My Bundles here:
-" Refer to |:NeoBundle-examples|.
-" Note: You don't set neobundle setting in .gvimrc!
-
-  " vimproc
-  NeoBundle 'Shougo/vimproc.vim', {
-        \ 'build' : {
-        \     'windows' : 'tools\\update-dll-mingw',
-        \     'cygwin' : 'make -f make_cygwin.mak',
-        \     'mac' : 'make -f make_mac.mak',
-        \     'unix' : 'make -f make_unix.mak',
-        \    },
-        \ }
-
-  NeoBundle 'Shougo/unite.vim'
-
-  NeoBundle 'Shougo/deoplete.nvim', {
-            \ 'disabled': !has('nvim')
-        \ }
-
-  NeoBundle 'Shougo/neocomplete.vim', {
-            \ 'disabled': has('nvim'),
-        \ }
-
-  NeoBundle 'ujihisa/neco-look'
-
-  NeoBundle 'junegunn/fzf'
-
-  " Extended f, F, t and T key mappings for Vim.
-  NeoBundle 'rhysd/clever-f.vim'
-
-  " comment stuff out
-  NeoBundle 'tpope/vim-commentary'
-
-  " Tern plugin for Vim
-  NeoBundle 'marijnh/tern_for_vim'
-
-  NeoBundle 'scrooloose/nerdtree'
-  NeoBundle 'scrooloose/syntastic'
-
-  NeoBundle 'editorconfig/editorconfig-vim'
-
-  " UltiSnips
-  NeoBundle 'SirVer/ultisnips'
-  NeoBundle 'honza/vim-snippets'
-
-  " EasyMotion
-  NeoBundle 'Lokaltog/vim-easymotion'
-
-  " airline
-  NeoBundle 'bling/vim-airline'
-
-  " session
-  NeoBundle 'xolox/vim-session'
-  NeoBundle 'xolox/vim-misc'
-
-  " A better JSON for Vim
-  NeoBundle 'elzr/vim-json'
-
-  NeoBundle 'Rykka/colorv.vim'
-  NeoBundle 'gregsexton/MatchTag'
-  NeoBundle 'chrisbra/NrrwRgn'
-  NeoBundle 'mileszs/ack.vim'
-  NeoBundle 'mattn/emmet-vim'
-  NeoBundle 'airblade/vim-gitgutter'
-  NeoBundle 'plasticboy/vim-markdown'
-  NeoBundle 'majutsushi/tagbar'
-  NeoBundle 'vim-php/tagbar-phpctags.vim'
-  NeoBundle 'terryma/vim-multiple-cursors'
-  NeoBundle 'sukima/xmledit'
-
-  " A Vim plugin for writing JSON with JSON Schema
-  NeoBundle 'Quramy/vison'
-
-  " vim plugin for tmux.conf
-  NeoBundle 'tmux-plugins/vim-tmux'
-
-  " Provides insert mode auto-completion for quotes, parens, brackets, etc.
-  "NeoBundle 'Raimondi/delimitMate'
-
-  " Auto close parentheses and repeat by dot dot dot...
-  NeoBundle 'cohama/lexima.vim'
-
-  " fugitive.vim: a Git wrapper so awesome
-  NeoBundle 'tpope/vim-fugitive', {'augroup' : 'fugitive'}
-
-  " surround.vim: quoting/parenthesizing made simple
-  NeoBundle 'tpope/vim-surround'
-
-  " wildfire: Smart selection of the closest text object.
-  NeoBundle 'gcmt/wildfire.vim'
-
-  " Go development plugin for Vim
-  NeoBundle 'fatih/vim-go'
-
-  " Up-to-date PHP syntax file (5.3, 5.4 & 5.5 support; basic 5.6 support)
-  NeoBundle 'StanAngeloff/php.vim'
-
-  " JavaScript
-  NeoBundle 'pangloss/vim-javascript'
-
-  " React JSX syntax highlighting and indenting for vim.
-  NeoBundle 'mxw/vim-jsx'
-
-  " html5
-  NeoBundle 'othree/html5.vim'
-
-  " css3 syntax
-  NeoBundle 'hail2u/vim-css3-syntax'
-
-  " dockerfile syntax
-  NeoBundle 'honza/dockerfile.vim'
-
-  " puppet syntax
-  NeoBundle 'rodjek/vim-puppet'
-
-  " Base16 Vim Colorschemes
-  NeoBundle 'chriskempson/base16-vim'
-
-  " github colorscheme
-  NeoBundle 'harryxu/vim-github-colorscheme'
-
-  NeoBundle 'mkarmona/colorsbox'
-
-  " Solarized Colorscheme
-  NeoBundle 'altercation/vim-colors-solarized'
-
-
-call neobundle#end()
 
 "filetype off
 filetype plugin indent on
-
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
 
 
 set modelines=1
@@ -189,9 +207,9 @@ set nu
 set cursorline
 
 if !has('Win32')
-    set list
+    "set list
     "set listchars=tab:·\ ,trail:·,eol:¬
-    set listchars=tab:·\ ,trail:·
+    "set listchars=tab:·\ ,trail:·
 endif
 
 set shiftround
