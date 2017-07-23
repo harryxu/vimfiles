@@ -1,15 +1,28 @@
 # You should use a IDE!!!
 
+## Clone
 
-## GO
+    git clone git@github.com:harryxu/vimfiles.git ~/.vim
 
-### Install Gocode for autocompletion.
+## Prepare for neovim
 
-    go get -u github.com/nsf/gocode
+    ln -s ~/.vim ./config/nvim
+    pip3 install neovim
+
+## Install dein.vim
+
+    curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+    sh ./installer.sh ~/.vim/bundle
+
+Open vim or neovim, run `:call dein#install()`
+
+## GO completion
+
+    :GoInstallBinaries 
 
 ### Set GOPATH
 
-`.zshrc` or `/.bashrc`:
+Put flow lines to `.zshrc` or `.bashrc`.
 
     # GOPATH
     if hash go 2>/dev/null; then
