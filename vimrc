@@ -318,25 +318,26 @@ imap <C-L> <C-x><C-o><C-p>
 " 打开文件即切换到文件所在目录
 set autochdir
 
-" ctrl s 保存
-noremap <C-S>           :update<CR>
-vnoremap <C-S>          <C-C>:update<CR>
-inoremap <C-S>          <C-O>:update<CR>
-noremap <D-S>           :update<CR>
-vnoremap <D-S>          <C-C>:update<CR>
-inoremap <D-S>          <C-O>:update<CR>
+" ctrl/command s 保存
+noremap <C-s>           :update<CR>
+vnoremap <C-s>          <C-C>:update<CR>
+inoremap <C-s>          <C-O>:update<CR>
 
-" ctrl v 从剪切板中粘贴
-cmap <C-V>              <C-R>+
-cmap <D-V>              <C-R>+
+noremap <D-s>           :update<CR>
+vnoremap <D-s>          <C-C>:update<CR>
+inoremap <D-l>          <C-O>:update<CR>
+
+" ctrl/command v 从剪切板中粘贴
+cmap <C-v>              <C-R>+
+cmap <D-v>              <C-R>+
 exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
 exe 'vnoremap <script> <C-V>' paste#paste_cmd['v']
 imap <S-Insert>         <C-V>
 vmap <S-Insert>         <C-V>
 
-" Ctrl c 复制到剪切板
-vnoremap <C-C> "+y
-vnoremap <D-C> "+y
+" ctrl/command c 复制到剪切板
+vnoremap <C-c> "+y
+vnoremap <D-c> "+y
 
 nmap j gj
 nmap k gk
