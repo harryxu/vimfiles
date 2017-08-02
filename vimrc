@@ -280,7 +280,7 @@ if has('Win32')
     set guifont=Inconsolata:h12
     set linespace=1
 elseif has('mac')
-    set guifont=Fira\ Code:h20
+    set guifont=Menlo:h20
 else
     set guifont=Courier\ Prime\ Code\ 17
     set gfw=WenQuanYi\Micro\Hei\ 12
@@ -330,6 +330,7 @@ inoremap <D-l>          <C-O>:update<CR>
 " ctrl/command v 从剪切板中粘贴
 cmap <C-v>              <C-R>+
 cmap <D-v>              <C-R>+
+imap <D-v>              <C-R>+
 exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
 exe 'vnoremap <script> <C-V>' paste#paste_cmd['v']
 imap <S-Insert>         <C-V>
