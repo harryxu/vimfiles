@@ -202,12 +202,6 @@ set nu
 
 set cursorline
 
-if !has('Win32')
-    "set list
-    "set listchars=tab:·\ ,trail:·,eol:¬
-    "set listchars=tab:·\ ,trail:·
-endif
-
 set shiftround
 set linebreak
 let &showbreak='↪ '
@@ -243,10 +237,6 @@ set nofoldenable
 "set foldmethod=syntax
 "启动vim时不要自动折叠代码
 set foldlevel=100
-
-"hide menubar and toolbar
-set go-=m
-set go-=T
 
 " toggle guioption
 function! ToggleGO(flag)
