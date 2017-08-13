@@ -13,12 +13,9 @@ if dein#load_state(expand('~/.vim/bundle'))
 
     call dein#add('Shougo/neocomplete.vim')
 
-
     call dein#add('ujihisa/neco-look')
 
-
     call dein#add('junegunn/fzf')
-
 
     " Extended f, F, t and T key mappings for Vim.
     call dein#add('rhysd/clever-f.vim')
@@ -27,18 +24,14 @@ if dein#load_state(expand('~/.vim/bundle'))
     " comment stuff out
     call dein#add('tpope/vim-commentary')
 
-
     " Tern plugin for Vim
     call dein#add('marijnh/tern_for_vim')
-
 
     call dein#add('scrooloose/nerdtree')
 
     call dein#add('scrooloose/syntastic')
 
-
     call dein#add('editorconfig/editorconfig-vim')
-
 
     " UltiSnips
     call dein#add('SirVer/ultisnips')
@@ -49,16 +42,13 @@ if dein#load_state(expand('~/.vim/bundle'))
     " EasyMotion
     call dein#add('Lokaltog/vim-easymotion')
 
-
     " airline
     call dein#add('bling/vim-airline')
-
 
     " session
     call dein#add('xolox/vim-session')
 
     call dein#add('xolox/vim-misc')
-
 
     " A better JSON for Vim
     call dein#add('elzr/vim-json')
@@ -136,25 +126,19 @@ if dein#load_state(expand('~/.vim/bundle'))
     " html5
     call dein#add('othree/html5.vim')
 
-
     " css3 syntax
     call dein#add('hail2u/vim-css3-syntax')
-
 
     " dockerfile syntax
     call dein#add('honza/dockerfile.vim')
 
-
     " puppet syntax
     call dein#add('rodjek/vim-puppet')
 
-
     call dein#add('mkarmona/colorsbox')
 
-
-    " Solarized Colorscheme
-    call dein#add('altercation/vim-colors-solarized')
-
+    " Apprentice colorscheme 
+    call dein#add('romainl/Apprentice')
 
     call dein#end()
     call dein#save_state()
@@ -251,6 +235,14 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 打开代码高亮
+syntax enable
+
+" Default Colorscheme
+let g:solarized_menu=0
+set background=dark
+
+
 if has('gui_running')
     if has('mac')
         set guifont=Menlo:h20
@@ -259,14 +251,12 @@ if has('gui_running')
     endif
 endif
 
-" 打开代码高亮
-syntax enable
+if has('gui_running') || has('gui_vimr')
+    colorscheme apprentice
+else
+    colorscheme colorsbox-steighties
+endif
 
-" Default Colorscheme
-let g:solarized_menu=0
-set background=dark
-
-colorscheme colorsbox-steighties
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
