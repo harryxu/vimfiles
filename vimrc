@@ -206,11 +206,6 @@ set shiftround
 set linebreak
 let &showbreak='↪ '
 
-
-
-" 横向滚动条
-"set go+=b
-
 set showcmd "show incomplete cmds down the bottom
 set showmode "show current mode down the bottom
 
@@ -238,17 +233,7 @@ set nofoldenable
 "启动vim时不要自动折叠代码
 set foldlevel=100
 
-" toggle guioption
-function! ToggleGO(flag)
-    if &go =~# a:flag
-        call feedkeys(":set go-=".a:flag."\<CR>")
-    else
-        call feedkeys(":set go+=".a:flag."\<CR>")
-    endif
-endfunction
-
 set wildignore+=*.o,.git,.svn,*.jpg,*.gif,*.png,*.swf,*.psd,*.rar,*.zip,*.doc
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Fileformats
@@ -266,15 +251,12 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if has('Win32')
-    set guifont=Inconsolata:h12
-    set linespace=1
-elseif has('mac')
-    set guifont=Menlo:h20
-else
-    set guifont=Courier\ Prime\ Code\ 17
-    set gfw=WenQuanYi\Micro\Hei\ 12
-    set linespace=2
+if has('gui_running')
+    if has('mac')
+        set guifont=Menlo:h20
+    else
+        set guifont=Fira\ Code\ h20
+    endif
 endif
 
 " 打开代码高亮
