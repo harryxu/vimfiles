@@ -74,34 +74,26 @@ if dein#load_state(expand('~/.vim/bundle'))
 
     call dein#add('sukima/xmledit')
 
-
     " A Vim plugin for writing JSON with JSON Schema
     call dein#add('Quramy/vison')
-
 
     " vim plugin for tmux.conf
     call dein#add('tmux-plugins/vim-tmux')
 
-
     " Provides insert mode auto-completion for quotes, parens, brackets, etc.
     "call dein#add('Raimondi/delimitMate')
-
 
     " Auto close parentheses and repeat by dot dot dot...
     call dein#add('cohama/lexima.vim')
 
-
     " fugitive.vim: a Git wrapper so awesome
     call dein#add('tpope/vim-fugitive',)
-
 
     " surround.vim: quoting/parenthesizing made simple
     call dein#add('tpope/vim-surround')
 
-
     " wildfire: Smart selection of the closest text object.
     call dein#add('gcmt/wildfire.vim')
-
 
     " Go development plugin for Vim
     call dein#add('fatih/vim-go')
@@ -114,14 +106,11 @@ if dein#load_state(expand('~/.vim/bundle'))
     " Up-to-date PHP syntax file (5.3, 5.4 & 5.5 support; basic 5.6 support)
     call dein#add('StanAngeloff/php.vim')
 
-
     " JavaScript
     call dein#add('pangloss/vim-javascript')
 
-
     " React JSX syntax highlighting and indenting for vim.
     call dein#add('mxw/vim-jsx')
-
 
     " html5
     call dein#add('othree/html5.vim')
@@ -131,9 +120,6 @@ if dein#load_state(expand('~/.vim/bundle'))
 
     " dockerfile syntax
     call dein#add('honza/dockerfile.vim')
-
-    " puppet syntax
-    call dein#add('rodjek/vim-puppet')
 
     call dein#add('mkarmona/colorsbox')
 
