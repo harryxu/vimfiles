@@ -580,3 +580,6 @@ endif
 
     " react jsx
     let g:jsx_ext_required = 0
+
+    " json
+    let g:vim_json_syntax_conceal = 0
