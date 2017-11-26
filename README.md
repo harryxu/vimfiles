@@ -6,7 +6,7 @@
 
 ## Prepare for neovim
 
-    ln -s ~/.vim ./config/nvim
+    ln -s ~/.vim/vimrc ~/.config/nvim/init.vim
     pip3 install neovim
 
 ## Install dein.vim
