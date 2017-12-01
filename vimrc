@@ -157,7 +157,9 @@ if has('Win32')
     behave mswin
 else
     "runtime! debian.vim
-    source $VIMRUNTIME/vimrc_example.vim
+    if filereadable("$VIMRUNTIME/vimrc_example.vim")
+        source $VIMRUNTIME/vimrc_example.vim
+    endif
     if filereadable("/etc/vim/gvimrc.local")
         source /etc/vim/gvimrc.local
     endif
