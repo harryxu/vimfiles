@@ -1,4 +1,4 @@
-# You should use a IDE!!!
+# Usage
 
 ## Clone
 
@@ -6,13 +6,20 @@
 
 ## Prepare for neovim
 
-    ln -s ~/.vim/vimrc ~/.config/nvim/init.vim
-    pip3 install neovim
+```shell
+# install python3 for mac
+brew install python3
+
+ln -s ~/.vim/vimrc ~/.config/nvim/init.vim
+pip3 install neovim
+```
 
 ## Install dein.vim
 
-    curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
-    sh ./installer.sh ~/.vim/bundle
+```shell
+curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+sh ./installer.sh ~/.vim/bundle
+```
 
 Open vim or neovim, run `:call dein#install()`
 
