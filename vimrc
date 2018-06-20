@@ -10,8 +10,11 @@ if dein#load_state(expand('~/.vim/bundle'))
     call dein#add('~/.vim/bundle/repos/github.com/Shougo/dein.vim')
 
     call dein#add('Shougo/deoplete.nvim')
-
-    call dein#add('Shougo/neocomplete.vim')
+    if !has('nvim')
+        call dein#add('roxma/nvim-yarp')
+        call dein#add('roxma/vim-hug-neovim-rpc')
+    endif
+    let g:deoplete#enable_at_startup = 1
 
     call dein#add('ujihisa/neco-look')
 
@@ -258,7 +261,6 @@ imap <F1> <ESC>
 map <F1> <ESC>
 
 " omni
-" Add a C-p is for cancel select first item, this issue is cased by NeoComplCache.
 imap <C-L> <C-x><C-o><C-p>
 
 " 插入当前时间
@@ -471,13 +473,6 @@ endif
         call feedkeys("\<C-y>,")
     endfun
     "let g:use_zen_complete_tag = 1
-
-    if !has('nvim')
-        "Use neocomplete.
-        let g:neocomplete#enable_at_startup = 1
-        " Use smartcase.
-        let g:neocomplete#enable_smart_case = 1
-    endif
 
     if has('nvim')
         " Use deoplete.
