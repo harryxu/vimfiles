@@ -23,6 +23,19 @@ sh ./installer.sh ~/.vim/bundle
 
 Open vim or neovim, run `:call dein#install()`
 
+## deoplete.nvim truble
+
+
+You need update neovim-python module.
+
+	pip3 install --upgrade neovim
+
+If see error:
+
+	ImportError: cannot import name 'PackOverflowError'
+
+`pip3 uninstall msgpack` and reinstall, then open neovim run `:UpdateRemotePlugins`
+
 ## GO completion
 
     :GoInstallBinaries 
