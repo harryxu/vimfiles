@@ -56,9 +56,6 @@ if dein#load_state(expand('~/.vim/bundle'))
     " A better JSON for Vim
     call dein#add('elzr/vim-json')
 
-
-    call dein#add('Rykka/colorv.vim')
-
     call dein#add('gregsexton/MatchTag')
 
     call dein#add('chrisbra/NrrwRgn')
@@ -473,11 +470,6 @@ endif
         call feedkeys("\<C-y>,")
     endfun
     "let g:use_zen_complete_tag = 1
-
-    if has('nvim')
-        " Use deoplete.
-        let g:deoplete#enable_at_startup = 1
-    endif
 
     " fzf search project root
     fun! s:fzf_root()
