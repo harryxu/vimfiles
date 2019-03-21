@@ -56,8 +56,6 @@ if dein#load_state(expand('~/.vim/bundle'))
     " A better JSON for Vim
     call dein#add('elzr/vim-json')
 
-    call dein#add('gregsexton/MatchTag')
-
     call dein#add('chrisbra/NrrwRgn')
 
     call dein#add('mileszs/ack.vim')
