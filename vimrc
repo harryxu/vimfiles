@@ -132,6 +132,10 @@ endif
 "filetype off
 filetype plugin indent on
 
+if dein#check_install()
+  call dein#install()
+endif
+
 
 set modelines=1
 
