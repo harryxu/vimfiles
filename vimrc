@@ -120,6 +120,7 @@ if dein#load_state(expand('~/.vim/bundle'))
     call dein#add('honza/dockerfile.vim')
 
     call dein#add('mkarmona/colorsbox')
+    call dein#add('morhetz/gruvbox')
 
     " Apprentice colorscheme 
     call dein#add('romainl/Apprentice')
