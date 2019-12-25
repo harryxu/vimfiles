@@ -78,9 +78,6 @@ if dein#load_state(expand('~/.vim/bundle'))
     " vim plugin for tmux.conf
     call dein#add('tmux-plugins/vim-tmux')
 
-    " Provides insert mode auto-completion for quotes, parens, brackets, etc.
-    "call dein#add('Raimondi/delimitMate')
-
     " Auto close parentheses and repeat by dot dot dot...
     call dein#add('cohama/lexima.vim')
 
