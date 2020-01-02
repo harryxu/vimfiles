@@ -1,138 +1,125 @@
 if &compatible
     set nocompatible
 endif
-set runtimepath+=~/.vim/bundle/repos/github.com/Shougo/dein.vim
 
+if empty(glob('~/.vim/autoload/plug.vim'))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-if dein#load_state(expand('~/.vim/bundle'))
-    call dein#begin(expand('~/.vim/bundle'))
+call plug#begin('~/.vim/plugged')
+    " ----- Start deoplete and plugins
+    Plug 'Shougo/deoplete.nvim'
+    Plug 'ujihisa/neco-look'
+    " deoplete.nvim source for Go. Asynchronous Go completion for Neovim.
+    Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
+    " ----- End deoplete and plugins
 
-    call dein#add('~/.vim/bundle/repos/github.com/Shougo/dein.vim')
-
-    call dein#add('Shougo/deoplete.nvim')
-    if !has('nvim')
-        call dein#add('roxma/nvim-yarp')
-        call dein#add('roxma/vim-hug-neovim-rpc')
-    endif
-    let g:deoplete#enable_at_startup = 1
-
-    call dein#add('ujihisa/neco-look')
-
-    call dein#add('junegunn/fzf')
+    Plug 'junegunn/fzf'
 
     " Extended f, F, t and T key mappings for Vim.
-    call dein#add('rhysd/clever-f.vim')
+    Plug 'rhysd/clever-f.vim'
 
 
     " comment stuff out
-    call dein#add('tpope/vim-commentary')
+    Plug 'tpope/vim-commentary'
 
     " Tern plugin for Vim
-    call dein#add('marijnh/tern_for_vim')
+    Plug 'marijnh/tern_for_vim'
 
-    call dein#add('scrooloose/nerdtree')
+    Plug 'scrooloose/nerdtree'
 
-    call dein#add('scrooloose/syntastic')
+    Plug 'scrooloose/syntastic'
 
-    call dein#add('editorconfig/editorconfig-vim')
+    Plug 'editorconfig/editorconfig-vim'
 
     " UltiSnips
-    call dein#add('SirVer/ultisnips')
+    Plug 'SirVer/ultisnips'
 
-    call dein#add('honza/vim-snippets')
+    Plug 'honza/vim-snippets'
 
 
     " EasyMotion
-    call dein#add('Lokaltog/vim-easymotion')
+    Plug 'Lokaltog/vim-easymotion'
 
     " airline
-    call dein#add('bling/vim-airline')
+    Plug 'bling/vim-airline'
 
     " session
-    call dein#add('xolox/vim-session')
+    Plug 'xolox/vim-session'
 
-    call dein#add('xolox/vim-misc')
+    Plug 'xolox/vim-misc'
 
     " A better JSON for Vim
-    call dein#add('elzr/vim-json')
+    Plug 'elzr/vim-json'
 
-    call dein#add('chrisbra/NrrwRgn')
+    Plug 'chrisbra/NrrwRgn'
 
-    call dein#add('mileszs/ack.vim')
+    Plug 'mileszs/ack.vim'
 
-    call dein#add('mattn/emmet-vim')
+    Plug 'mattn/emmet-vim'
 
-    call dein#add('airblade/vim-gitgutter')
+    Plug 'airblade/vim-gitgutter'
 
-    call dein#add('plasticboy/vim-markdown')
+    Plug 'plasticboy/vim-markdown'
 
-    call dein#add('majutsushi/tagbar')
+    Plug 'majutsushi/tagbar'
 
-    call dein#add('terryma/vim-multiple-cursors')
+    Plug 'terryma/vim-multiple-cursors'
 
-    call dein#add('sukima/xmledit')
+    Plug 'sukima/xmledit'
 
     " A Vim plugin for writing JSON with JSON Schema
-    call dein#add('Quramy/vison')
+    Plug 'Quramy/vison'
 
     " vim plugin for tmux.conf
-    call dein#add('tmux-plugins/vim-tmux')
+    Plug 'tmux-plugins/vim-tmux'
 
     " Auto close parentheses and repeat by dot dot dot...
-    call dein#add('cohama/lexima.vim')
+    Plug 'cohama/lexima.vim'
 
     " fugitive.vim: a Git wrapper so awesome
-    call dein#add('tpope/vim-fugitive',)
+    Plug 'tpope/vim-fugitive'
 
     " surround.vim: quoting/parenthesizing made simple
-    call dein#add('tpope/vim-surround')
+    Plug 'tpope/vim-surround'
 
     " wildfire: Smart selection of the closest text object.
-    call dein#add('gcmt/wildfire.vim')
+    Plug 'gcmt/wildfire.vim'
 
     " Go development plugin for Vim
-    call dein#add('fatih/vim-go')
+    Plug 'fatih/vim-go'
 
-    " deoplete.nvim source for Go. Asynchronous Go completion for Neovim.
-    call dein#add('zchee/deoplete-go', {'build': 'make'})
-
-    call dein#add('vim-scripts/xterm16.vim')
+    Plug 'vim-scripts/xterm16.vim'
 
     " Up-to-date PHP syntax file (5.3, 5.4 & 5.5 support; basic 5.6 support)
-    call dein#add('StanAngeloff/php.vim')
+    Plug 'StanAngeloff/php.vim'
 
     " JavaScript
-    call dein#add('pangloss/vim-javascript')
+    Plug 'pangloss/vim-javascript'
 
     " React JSX syntax highlighting and indenting for vim.
-    call dein#add('mxw/vim-jsx')
+    Plug 'mxw/vim-jsx'
 
     " html5
-    call dein#add('othree/html5.vim')
+    Plug 'othree/html5.vim'
 
     " css3 syntax
-    call dein#add('hail2u/vim-css3-syntax')
+    Plug 'hail2u/vim-css3-syntax'
 
     " dockerfile syntax
-    call dein#add('honza/dockerfile.vim')
+    Plug 'honza/dockerfile.vim'
 
-    call dein#add('mkarmona/colorsbox')
-    call dein#add('morhetz/gruvbox')
+    Plug 'mkarmona/colorsbox'
+    Plug 'morhetz/gruvbox'
 
-    " Apprentice colorscheme 
-    call dein#add('romainl/Apprentice')
-
-    call dein#end()
-    call dein#save_state()
-endif
+    Plug 'romainl/Apprentice'
+call plug#end()
 
 
 "filetype off
 filetype plugin indent on
-
-if dein#check_install()
-  call dein#install()
-endif
 
 
 set modelines=1
@@ -227,7 +214,6 @@ endif
 syntax enable
 
 " Default Colorscheme
-let g:solarized_menu=0
 set background=dark
 
 

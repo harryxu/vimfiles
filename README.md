@@ -14,14 +14,8 @@ ln -s ~/.vim/vimrc ~/.config/nvim/init.vim
 pip3 install neovim
 ```
 
-## Install dein.vim
 
-```shell
-curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
-sh ./installer.sh ~/.vim/bundle
-```
-
-Open vim or neovim, run `:call dein#install()`
+Open vim or neovim, if VimPlug not auto install, run `:PlugInstall`.
 
 ## deoplete.nvim truble
 
