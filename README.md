@@ -11,7 +11,7 @@
 brew install python3
 
 ln -s ~/.vim/vimrc ~/.config/nvim/init.vim
-pip3 install neovim
+pip3 install pynvim
 ```
 
 
@@ -19,10 +19,11 @@ Open vim or neovim, if VimPlug not auto install, run `:PlugInstall`.
 
 ## deoplete.nvim truble
 
-
-You need update neovim-python module.
-
-	pip3 install --upgrade neovim
+### for vim8 on macos:
+[Error Every time I load in vim8 (not neovim)](https://github.com/roxma/vim-hug-neovim-rpc/issues/47#issuecomment-630323947) (No module named ‘neovim’)
+```
+PATH="/usr/local/opt/python@3.8/bin:$PATH" pip3 install pynvim
+```
 
 If see error:
 
