@@ -10,17 +10,28 @@ endif
 
 call plug#begin('~/.vim/plugged')
     " ----- Start deoplete and plugins
-    Plug 'Shougo/deoplete.nvim'
+    if has('nvim')
+        Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    else
+        Plug 'Shougo/deoplete.nvim'
+        Plug 'roxma/nvim-yarp'
+        Plug 'roxma/vim-hug-neovim-rpc'
+    endif
     Plug 'ujihisa/neco-look'
     " deoplete.nvim source for Go. Asynchronous Go completion for Neovim.
     Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
+    
+    if has('win32') || has('win64')
+        Plug 'tbodt/deoplete-tabnine', { 'do': 'powershell.exe .\install.ps1' }
+    else
+        Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
+    endif
     " ----- End deoplete and plugins
 
     Plug 'junegunn/fzf'
 
     " Extended f, F, t and T key mappings for Vim.
     Plug 'rhysd/clever-f.vim'
-
 
     " comment stuff out
     Plug 'tpope/vim-commentary'
@@ -38,7 +49,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'SirVer/ultisnips'
 
     Plug 'honza/vim-snippets'
-
 
     " EasyMotion
     Plug 'Lokaltog/vim-easymotion'
@@ -116,6 +126,9 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'romainl/Apprentice'
 call plug#end()
+
+let g:deoplete#enable_at_startup = 1
+
 
 
 "filetype off
