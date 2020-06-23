@@ -21,6 +21,15 @@ Open vim or neovim, if VimPlug not auto install, run `:PlugInstall`.
 
 ### for vim8 on macos:
 [Error Every time I load in vim8 (not neovim)](https://github.com/roxma/vim-hug-neovim-rpc/issues/47#issuecomment-630323947) (No module named ‘neovim’)
+
+try 
+
+```
+pip3 install --user pynvim
+```
+
+or
+
 ```
 PATH="/usr/local/opt/python@3.8/bin:$PATH" pip3 install pynvim
 ```
