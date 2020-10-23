@@ -20,6 +20,9 @@ Open vim or neovim, if VimPlug not auto install, run `:PlugInstall`.
 ## deoplete.nvim truble
 
 ### for vim8 on macos:
+
+https://github.com/roxma/vim-hug-neovim-rpc/issues/47#issuecomment-624548838
+
 [Error Every time I load in vim8 (not neovim)](https://github.com/roxma/vim-hug-neovim-rpc/issues/47#issuecomment-630323947) (No module named ‘neovim’)
 
 try 
