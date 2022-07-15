@@ -9,24 +9,17 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-    " ----- Start deoplete and plugins
-    if has('nvim')
-        Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-    else
-        Plug 'Shougo/deoplete.nvim'
-        Plug 'roxma/nvim-yarp'
-        Plug 'roxma/vim-hug-neovim-rpc'
-    endif
-    Plug 'ujihisa/neco-look'
-    " deoplete.nvim source for Go. Asynchronous Go completion for Neovim.
-    Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
-    
-    if has('win32') || has('win64')
-        Plug 'tbodt/deoplete-tabnine', { 'do': 'powershell.exe .\install.ps1' }
-    else
-        Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
-    endif
-    " ----- End deoplete and plugins
+
+    " ddc plugins start
+    Plug 'Shougo/ddc.vim'
+    Plug 'Shougo/ddc-matcher_head'
+    Plug 'Shougo/ddc-sorter_rank'
+    Plug 'Shougo/pum.vim'
+    Plug 'Shougo/ddc-omni'
+    Plug 'vim-denops/denops.vim'
+    Plug 'octaltree/cmp-look'
+    Plug 'tani/ddc-path'
+    " ddc plugins end
 
     Plug 'junegunn/fzf'
 
@@ -117,6 +110,9 @@ call plug#begin('~/.vim/plugged')
 
     " css3 syntax
     Plug 'hail2u/vim-css3-syntax'
+
+    " A very fast, multi-syntax context-sensitive color name highlighter
+    Plug 'ap/vim-css-color'
 
     " dockerfile syntax
     Plug 'honza/dockerfile.vim'
@@ -230,13 +226,7 @@ syntax enable
 set background=dark
 
 
-if has('gui_running')
-    if has('mac')
-        set guifont=Menlo:h20
-    else
-        set guifont=Fira\ Code\ h20
-    endif
-endif
+set guifont=Iosevka\ Curly\ Slab:h21
 
 if has('gui_running') || has('gui_vimr')
     colorscheme apprentice
@@ -557,3 +547,31 @@ endif
 
     " json
     let g:vim_json_syntax_conceal = 0
+
+    " ddc.vim
+    call ddc#custom#patch_global({
+            \ 'ignoreCase': v:true,
+        \})
+    call ddc#custom#patch_global('sources', ['omni', 'path', 'look'])
+    call ddc#custom#patch_global('sourceOptions', {
+            \ '_': {
+            \   'matchers': ['matcher_head'],
+            \   'sorters': ['sorter_rank'],
+            \   'path': {'mark': 'P'},
+            \ },
+            \ 'look': {'converters': ['loud', 'matcher_head'], 'matchers': [], 'mark': 'l', 'isVolatile': v:true},
+            \ 'omni': {'mark': 'O'},
+        \ })
+    call ddc#custom#patch_global('sourceParams', {
+            \ 'look': {
+            \   'convertCase': v:true,
+            \   'dict': v:null
+            \ },
+            \ 'path': {
+            \   'cmd': ['fd', '--max-depth', '5'],
+            \ },
+        \})
+
+    call ddc#enable()
+
+
