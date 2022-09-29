@@ -34,6 +34,12 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'scrooloose/nerdtree'
 
+    if has('nvim')
+        " A File Explorer For Neovim Written In Lua, https://github.com/kyazdani42/nvim-tree.lua
+        Plug 'kyazdani42/nvim-web-devicons'
+        Plug 'kyazdani42/nvim-tree.lua'
+    endif
+
     Plug 'scrooloose/syntastic'
 
     Plug 'editorconfig/editorconfig-vim'
@@ -407,9 +413,19 @@ endif
     let g:tagbar_phpctags_bin='/Users/harry/workspace/utils/phpctags/phpctags'
 
     """"""""""""""""""""""""""""""
-    " NERDTree
+    " NvimTree / NERDTree
     """"""""""""""""""""""""""""""
-    map <F3> <ESC>:NERDTreeToggle<CR>
+    if has('nvim')
+lua << EOF
+    vim.g.loaded = 1
+    vim.g.loaded_netrwPlugin = 1
+
+    require("nvim-tree").setup()
+EOF
+        map <F3> <ESC>:NvimTreeToggle<CR>
+    else
+        map <F3> <ESC>:NERDTreeToggle<CR>
+    endif
 
     nmap ,g :NERDTreeFind<CR>
 

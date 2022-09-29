@@ -14,6 +14,11 @@ ln -s ~/.vim/vimrc ~/.config/nvim/init.vim
 pip3 install pynvim
 ```
 
+### font
+```
+brew tap homebrew/cask-fonts
+brew install --cask font-Iosevka-nerd-font
+```
 
 Open vim or neovim, if VimPlug not auto install, run `:PlugInstall`.
 
