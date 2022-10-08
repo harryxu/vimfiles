@@ -123,10 +123,12 @@ call plug#begin('~/.vim/plugged')
     " dockerfile syntax
     Plug 'honza/dockerfile.vim'
 
+    " color themes
     Plug 'mkarmona/colorsbox'
     Plug 'morhetz/gruvbox'
-
     Plug 'romainl/Apprentice'
+    Plug 'EdenEast/nightfox.nvim'
+
 call plug#end()
 
 let g:deoplete#enable_at_startup = 1
@@ -235,9 +237,11 @@ set background=dark
 set guifont=Iosevka\ Curly\ Slab:h21
 
 if has('gui_running') || has('gui_vimr')
-    colorscheme apprentice
+    colorscheme nordfox
+    "colorscheme apprentice
 else
-    colorscheme colorsbox-steighties
+    "colorscheme colorsbox-steighties
+    colorscheme nordfox
 endif
 
 
