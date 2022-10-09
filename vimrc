@@ -38,6 +38,7 @@ call plug#begin('~/.vim/plugged')
         " A File Explorer For Neovim Written In Lua, https://github.com/kyazdani42/nvim-tree.lua
         Plug 'kyazdani42/nvim-web-devicons'
         Plug 'kyazdani42/nvim-tree.lua'
+        Plug 'romgrk/barbar.nvim'
     endif
 
     Plug 'scrooloose/syntastic'
