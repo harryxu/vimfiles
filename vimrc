@@ -41,7 +41,13 @@ call plug#begin('~/.vim/plugged')
         Plug 'romgrk/barbar.nvim'
     endif
 
+    " Make your Vim/Neovim as smart as VSCode.
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
     Plug 'scrooloose/syntastic'
+
+    " Codeium
+    Plug 'Exafunction/codeium.vim'
 
     Plug 'editorconfig/editorconfig-vim'
 
@@ -526,6 +532,13 @@ EOF
     " => vim autoclose
     """"""""""""""""""""""""""""""
     let g:AutoClosePreserveDotReg = 0
+
+
+    """"""""""""""""""""""""""""""
+    " => coc.nvim
+    """"""""""""""""""""""""""""""
+    source $HOME/.config/nvim/plug-config/coc.vim
+
 
     """"""""""""""""""""""""""""""
     " => Syntastic
