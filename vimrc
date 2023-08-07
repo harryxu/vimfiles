@@ -130,6 +130,10 @@ call plug#begin('~/.vim/plugged')
     " dockerfile syntax
     Plug 'honza/dockerfile.vim'
 
+    " Seamless navigation between tmux panes and vim splits
+    Plug 'christoomey/vim-tmux-navigator'
+
+
     " color themes
     Plug 'mkarmona/colorsbox'
     Plug 'morhetz/gruvbox'
@@ -171,10 +175,10 @@ set autoread
 
 "Have the mouse enabled all the time:
 set mouse=a
-if &term =~ '^screen'
-    " tmux knows the extended mouse mode
-    set ttymouse=xterm2
-endif
+" if &term =~ '^screen'
+"     " tmux knows the extended mouse mode
+"     set ttymouse=xterm2
+" endif
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -583,15 +587,14 @@ EOF
     let g:vim_json_syntax_conceal = 0
 
     " ddc.vim
-    call ddc#custom#patch_global({
-            \ 'ignoreCase': v:true,
-        \})
+    " call ddc#custom#patch_global({
+    "         \ 'ignoreCase': v:true,
+    "     \})
     call ddc#custom#patch_global('sources', ['omni', 'path', 'look'])
     call ddc#custom#patch_global('sourceOptions', {
             \ '_': {
             \   'matchers': ['matcher_head'],
             \   'sorters': ['sorter_rank'],
-            \   'path': {'mark': 'P'},
             \ },
             \ 'look': {'converters': ['loud', 'matcher_head'], 'matchers': [], 'mark': 'l', 'isVolatile': v:true},
             \ 'omni': {'mark': 'O'},
